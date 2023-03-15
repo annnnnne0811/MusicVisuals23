@@ -1,8 +1,12 @@
 # Music Visualiser Project
 
-Name: Mary Anne Flores 
+Name: 
 
-Student Number: C20461582
+Mary Anne Flores 
+
+Student Number: 
+
+C20461582
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -12,8 +16,9 @@ Student Number: C20461582
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
-
+The song we decided to do for this project was " Shinunoga E-wa" by Fujii Kaze. 
 # Instructions
+The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose ehich
 
 # How it works
 
