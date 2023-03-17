@@ -37,6 +37,7 @@ public class Start extends Visual{
         {
         //for the main menu
         case 0:
+            size(300,300);
             background(0);
             fill(135,206,250);
             textAlign(CENTER);
@@ -58,7 +59,7 @@ public class Start extends Visual{
             //Anne 
             case 1:
             background(0);
-            anne.render();
+            anne.draw();
             break;
 
     }

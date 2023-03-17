@@ -12,20 +12,15 @@ public class Anne extends Visual{
     public Anne(Start anne){
         this.Anne = anne;
     }
-    
 
-
-    void render(){
-
-
-
+    public void setup(){
+        size(500,500);
     }
-
        public void draw(){
 
+            circle(50, 50, 50);
             background(255);
 
-            ellipse(200, 200, 100, 100);
         }
         
     
@@ -34,5 +29,4 @@ public class Anne extends Visual{
 
 
 }
-
 
