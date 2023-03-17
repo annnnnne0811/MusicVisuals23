@@ -31,13 +31,20 @@ public class Start extends Visual{
         colorMode(HSB);
     }
 
+
+    public void settings()
+    {
+        size(500,500);
+    }
+
+
+
     public void draw()
     {
         switch (menu)
         {
         //for the main menu
         case 0:
-            size(300,300);
             background(0);
             fill(135,206,250);
             textAlign(CENTER);
