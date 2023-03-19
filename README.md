@@ -4,9 +4,13 @@ Name:
 
 Mary Anne Flores 
 
+Mena Nguyen
+
 Student Number: 
 
 C20461582
+
+C20418324
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
