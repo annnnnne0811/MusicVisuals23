@@ -6,11 +6,15 @@ Mary Anne Flores
 
 Mena Nguyen
 
+Airish Reyes
+
 Student Number: 
 
 C20461582
 
 C20418324
+
+C20477044
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
