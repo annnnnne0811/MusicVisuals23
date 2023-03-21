@@ -7,7 +7,8 @@ import ie.tudublin.Visual;
 public class Start extends Visual{
     Anne anne = new Anne(this);
 
-    int menu = 0;
+    //For menu buttons
+    int mode = 0;
 
 
 
@@ -15,10 +16,12 @@ public class Start extends Visual{
     {
         if(key == '0')
         {
+            mode = 0;
         }
 
         if(key == '1')
         {
+            mode = 1;
         }
     }
 
@@ -34,14 +37,14 @@ public class Start extends Visual{
 
     public void settings()
     {
-        size(500,500);
+        size(600, 600, P3D);
     }
 
 
 
     public void draw()
     {
-        switch (menu)
+        switch (mode)
         {
         //for the main menu
         case 0:
@@ -65,10 +68,9 @@ public class Start extends Visual{
 
             //Anne 
             case 1:
-            background(0);
-            anne.draw();
+            background(0, 0, 20);
+            anne.render();
             break;
-
     }
 
     }
