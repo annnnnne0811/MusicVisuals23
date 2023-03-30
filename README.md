@@ -8,6 +8,8 @@ Mena Nguyen
 
 Airish Reyes
 
+Paris Le
+
 Student Number: 
 
 C20461582
@@ -15,6 +17,8 @@ C20461582
 C20418324
 
 C20477044
+
+C20401536
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
