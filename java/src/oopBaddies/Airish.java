@@ -53,10 +53,15 @@ public class Airish extends Visual {
         airish.pop();
         airish.noFill();
 
-        //bird uppper right in sky
+        //bird upper right in sky
         airish.translate(450,-7);
         airish.line(200,80,160,100);
         airish.line(160,80,160,100);
+
+        //borderline colour of mountains
+        stroke(211);
+        //inside colour of mountains
+        fill(255);
 
 
 
