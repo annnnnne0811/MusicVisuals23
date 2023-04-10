@@ -6,6 +6,7 @@ import ie.tudublin.Visual;
 
 public class Start extends Visual{
     Anne anne = new Anne(this);
+    Airish airish = new Airish(this);
 
     //For menu buttons
     int mode = 0;
@@ -22,6 +23,11 @@ public class Start extends Visual{
         if(key == '1')
         {
             mode = 1;
+        }
+
+        if(key == '2')
+        {
+            mode = 2;
         }
     }
 
@@ -60,6 +66,7 @@ public class Start extends Visual{
 
             //Menu Options
             text("Press 1: Anne ", width/2.0f,(height/30.0f)+60);
+            text("Press 2: Airish ", width/2.0f,(height/3.0f)+120);
             
 
             break;
@@ -71,7 +78,13 @@ public class Start extends Visual{
             background(135, 206, 235);
             anne.render();
             break;
-    }
+
+            //Airish
+            case 2:
+            background(175, 213, 240);
+            airish.render();
+            break;
+        }
 
     }
 
