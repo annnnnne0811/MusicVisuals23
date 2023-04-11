@@ -68,7 +68,7 @@ public class Start extends Visual{
 
             //Anne 
             case 1:
-            background(135, 206, 235);
+            background(153, 204, 255);
             anne.render();
             break;
     }

@@ -11,12 +11,13 @@ public class Anne extends Visual{ //Start of Main
         this.anne = anne;
     }
 
+
     //function to draw clouds
     public void cloud(int a, int b, int c, float d)
     {
         anne.noStroke();
         anne.fill(255);
-        anne.ellipse(a+530, b+295, c+40, d+30);
+        anne.ellipse(a+530, b+295, c+60, d+30);
         anne.ellipse(a+510, b+305, c+40, d+30);
         anne.ellipse(a+460, b+295, c+40, d+30);
         anne.ellipse(a+480, b+305, c+40, d+30);
@@ -24,8 +25,6 @@ public class Anne extends Visual{ //Start of Main
         anne.ellipse (a+510, b+285, c+40, d+30);
         anne.ellipse (a+490, b+280, c+40, d+30);
     }
-
-
 
     //Start of Draw
     void render()
@@ -43,12 +42,12 @@ public class Anne extends Visual{ //Start of Main
         anne.colorMode(HSB);
 
         //The bigger the fill number the faster it goes
-        anne.fill(0,5);
+        anne.fill(0,10);
         anne.fill(255);
         anne.noStroke();
 
 
-        //Making the stars/circle bigger representing height and width
+        //Making the wcircle bigger representing height and width
         if( anne.frameCount % 10 ==  00)
         {
 
@@ -66,6 +65,12 @@ public class Anne extends Visual{ //Start of Main
         cloud(-100, -544, 10, 10* smoothedavg*10);
         cloud(-300, -600, 10, 10* smoothedavg*10);
         cloud(0, -644, 10, 10* smoothedavg*10);
+
+
+        //adding more cloud??
+        cloud(1200, -544, 10, 10* smoothedavg*10);
+        cloud(-400, -644, 10, 10* smoothedavg*10);
+        cloud(50, -544, 10, 10* smoothedavg*10);
 
     }//end of render
  
