@@ -25,10 +25,8 @@ public class Start extends Visual{
             mode = 1;
         }
 
-        if(key == '2')
-        {
-            mode = 2;
-        }
+
+
     }
 
     public void setup()
@@ -75,15 +73,20 @@ public class Start extends Visual{
 
             //Anne 
             case 1:
-            background(153, 204, 255);
-            anne.render();
-            break;
-
-            //Airish
-            case 2:
             background(175, 213, 240);
             airish.render();
             break;
+
+
+            //Airish
+           // case 2:
+          //  background(175,213, 240);
+           // airish.render
+            //Airish
+          //  case 2:
+           // background(175, 213, 240);
+           // airish.render();
+           // break;
         }
 
     }
