@@ -30,8 +30,7 @@ C20401536
 # Description of the assignment
 The song we decided to do for this project was " Shinunoga E-wa" by Fujii Kaze. 
 # Instructions
-The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose ehich
-fwervgr
+The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose.
 # How it works
 
 # What I am most proud of in the assignment
