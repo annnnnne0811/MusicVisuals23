@@ -25,8 +25,10 @@ public class Start extends Visual{
             mode = 1;
         }
 
-
-
+        if(key == '2')
+        {
+            mode = 2;
+        }
     }
 
     public void setup()
@@ -62,10 +64,12 @@ public class Start extends Visual{
             textSize(width/30.0f);
 
 
+
             //Menu Options
-            text("Press 1: Anne ", width/2.0f,(height/30.0f)+60);
-            text("Press 2: Airish ", width/2.0f,(height/3.0f)+120);
-            
+            text("Press 1: Anne", width/2.0f, (height/3.0f) + 60);
+            text("Press 2: Airish", width/2.0f, (height/3.0f) + 120);
+            text("Press 3: Mena", width/2.0f, (height/3.0f) + 180);
+            text("Press 4: Paris", width/2.0f, (height/3.0f) + 240);
 
             break;
 
@@ -73,21 +77,17 @@ public class Start extends Visual{
 
             //Anne 
             case 1:
-            background(175, 213, 240);
-            airish.render();
+            background(153, 204, 255);
+            anne.render();
             break;
 
 
             //Airish
-           // case 2:
-          //  background(175,213, 240);
-           // airish.render
-            //Airish
-          //  case 2:
-           // background(175, 213, 240);
-           // airish.render();
-           // break;
-        }
+            case 2:
+            background(175, 213, 240);
+            airish.render();
+            break;
+    }
 
     }
 

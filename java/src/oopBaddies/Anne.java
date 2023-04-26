@@ -1,15 +1,26 @@
 package oopBaddies;
+import java.nio.FloatBuffer;
 
 import ie.tudublin.Visual;
+
+
 
 public class Anne extends Visual{ //Start of Main
 
     Start anne;
-    float theta = 0;
+    Float = 0;
+
+
+
+
 
     public Anne(Start anne) {
         this.anne = anne;
+        cy = this.anne.height / 2;
     }
+
+
+      
 
 
     //function to draw clouds
@@ -25,6 +36,9 @@ public class Anne extends Visual{ //Start of Main
         anne.ellipse (a+510, b+285, c+40, d+30);
         anne.ellipse (a+490, b+280, c+40, d+30);
     }
+
+    
+
 
     //Start of Draw
     void render()
@@ -47,7 +61,7 @@ public class Anne extends Visual{ //Start of Main
         anne.noStroke();
 
 
-        //Making the wcircle bigger representing height and width
+        //Making the circle bigger representing height and width
         if( anne.frameCount % 10 ==  00)
         {
 
@@ -58,6 +72,21 @@ public class Anne extends Visual{ //Start of Main
         anne.translate(anne.width/2, anne.height/2, 0);
 
 
+        anne.colorMode(PApplet.HSB);
+        for(int i = 0 ; i < anne.getAudioBuffer(); i++)
+{
+    anne.stroke(
+        PApplet.map(i, 0, anne.getAudioBuffer(), 0, 155)
+        , 300 
+        , 350
+    );
+
+    anne.line(i, cy, i, cy + cy * anne.getAudioBuffer());
+}
+
+
+
+    
         //clouds
         cloud(-600, -544, 10, 10* smoothedavg*10);
         cloud(-800, -644, 10, 10* smoothedavg*10);
@@ -72,6 +101,8 @@ public class Anne extends Visual{ //Start of Main
         cloud(-400, -644, 10, 10* smoothedavg*10);
         cloud(50, -544, 10, 10* smoothedavg*10);
 
+
     }//end of render
+
  
 }
