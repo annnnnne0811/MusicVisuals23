@@ -86,7 +86,6 @@ public class Airish extends Visual {
         
         //bird upper right in sky
         airish.translate(450,-7);
-        airish.fill(255);
         airish.line(200,80,160,100);
         airish.line(160,80,160,100);
         
