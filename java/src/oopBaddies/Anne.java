@@ -7,10 +7,19 @@ public class Anne extends Visual
 {
     Start anne;
 
+    Rain x, y;
+
+
+
 
     public Anne(Start anne)
     {
         this.anne = anne;
+    }
+
+    public rain(float a, float b )
+    {
+        
     }
 
 
@@ -28,10 +37,15 @@ public class Anne extends Visual
         anne.ellipse (a+490, b+280, c+40, d+30);
     }
 
+    public void ground(int a, int b, int c, int d)
+    {
+        
+        anne.fill(170, 150, 146, 240);
+        anne.rect(0, 900, 2000, 120);
+    }
 
 
-
-    //Start of the draw 
+    //Start of the draw render
     void render()
     {
         //calculating the everage amplitude
@@ -46,23 +60,23 @@ public class Anne extends Visual
 
         anne.colorMode(HSB);
 
+
+        //the ground
+        ground(0,530,600,530);
+
+
         //The bigger the fill the faster it goes
         anne.fill(0,10);
         anne.fill(255);
         anne.noStroke();
 
-
-
         //Making the circle bigger representing height and width
         if( anne.frameCount % 30 ==  00)
         {
-        
             anne.ellipse((anne.width), (anne.height), smoothedavg, smoothedavg);
-        
         }
 
         anne.translate(anne.width/2, anne.height/2,0);
-
 
         //the clouds
         cloud(-600, -544, 10, 10* smoothedavg*10);
@@ -71,7 +85,11 @@ public class Anne extends Visual
         cloud(-100, -544, 10, 10* smoothedavg*10);
         cloud(-300, -600, 10, 10* smoothedavg*10);
         cloud(0, -644, 10, 10* smoothedavg*10);
-    }
+
+
+
+    }//End of  render 
+
 
 //End of main
 }

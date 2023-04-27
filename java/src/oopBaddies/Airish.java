@@ -28,11 +28,6 @@ public class Airish extends Visual {
             airish.triangle(45,400,500,400,250,50);
             airish.triangle(100,400,500,400,400,20);
             
-
-    
-
-            
-
     }
 
     void render()
@@ -69,7 +64,9 @@ public class Airish extends Visual {
         airish.translate(40,80);
         airish.fill(245, 187, 87);
         airish.stroke(245, 187, 87);
-        airish.push();
+
+
+        airish.pushMatrix();
         airish.translate(500,40);
         airish.rotate(radians(frameCount / 2));
         airish.ellipse(0, 0, 60, 60);
@@ -81,7 +78,9 @@ public class Airish extends Visual {
         airish.line(40, 0, 60, 0);
         airish.line(-45, 45, -30, 30);
         airish.line(45, 45, 30, 30);
-        airish.pop();
+
+        
+        airish.popMatrix();
         airish.noFill();
         
         //bird upper right in sky
