@@ -7,6 +7,7 @@ import ie.tudublin.Visual;
 public class Start extends Visual{
     Anne anne = new Anne(this);
     Airish airish = new Airish(this);
+    Paris paris = new Paris(this);
 
     //For menu buttons
     int mode = 0;
@@ -28,6 +29,16 @@ public class Start extends Visual{
         if(key == '2')
         {
             mode = 2;
+        }
+
+        if(key == '3')
+        {
+            mode = 3;
+        }
+
+        if(key == '4')
+        {
+            mode = 4;
         }
     }
 
@@ -59,10 +70,10 @@ public class Start extends Visual{
             textAlign(CENTER);
             textSize(width/20.0f);
             
+
             //Title
             text("Shinunoga E-wa by Fujii Kaze", width/2.0f, height/3.0f);
             textSize(width/30.0f);
-
 
 
             //Menu Options
@@ -72,7 +83,6 @@ public class Start extends Visual{
             text("Press 4: Paris", width/2.0f, (height/3.0f) + 240);
 
             break;
-
 
 
             //Anne 
@@ -87,10 +97,23 @@ public class Start extends Visual{
             background(175, 213, 240);
             airish.render();
             break;
-    }
+
+
+            //Mena
+            case 3:
+            background(0);
+            break;
+
+
+            //Paris 
+            case 4:
+            background(color(255, 192, 203, 200));
+            paris.render();
+            break;
+            
 
     }
-
+    }
 
 
 }
