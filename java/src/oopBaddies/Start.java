@@ -79,10 +79,44 @@ public class Start extends Visual{
 
 
             //Menu Options
+<<<<<<< HEAD
             text("Press 1:Anne", width/2.0f, (height/3.0f) + 60);
             text("Press 2:Airish", width/2.0f, (height/3.0f) + 120);
             text("Press 3:Mena", width/2.0f, (height/3.0f) + 180);
             text("Press 4:Paris", width/2.0f, (height/3.0f) + 240);            
+=======
+            text("Press 1: Anne", width/2.0f, (height/3.0f) + 60);
+            text("Press 2: Airish", width/2.0f, (height/3.0f) + 120);
+            text("Press 3: Mena", width/2.0f, (height/3.0f) + 180);
+            text("Press 4: Paris", width/2.0f, (height/3.0f) + 240);
+
+
+            pushMatrix();
+
+            smooth();
+            noSmooth();
+            frameRate(15);
+        
+            background(179, 158, 181);
+            translate(width/2, height/2);
+            rotate(radians(frameCount));
+
+            //Draws 5 petal, rotating after one 
+            fill(128, 128, 0);
+            for( int i = 0; i < 5; i++);
+            {
+                ellipse(0, -40, 50, 50);
+                rotate(radians(72));               
+
+            }
+
+            //centre circle
+            fill(255,255,0);
+            ellipse(0,0, 50, 50);
+
+            popMatrix();
+
+>>>>>>> ebd65671e447fedf962e21408f5b7dc3e770b79e
 
             break;
 

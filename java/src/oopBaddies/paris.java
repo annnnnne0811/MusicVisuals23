@@ -17,13 +17,7 @@ public class paris extends Visual{
         this.paris = paris;
     }
     
-    float a, b;  // these are the position of the heart
-    float va, vb;  
-    float ac, bd;  
-    float damping = 1;  // damping factor for the bouncing motion of the hearts
-    boolean isBouncingA = false; 
-    boolean isBouncingB = false; //  to indicate whether the heart is bouncing off the X or Y edge
-
+    
     public void mainHeart(float a, float b, float c, float d) {
             float size = 1 * width / 40; // set the main heart the same width of the screen divided by 40
             paris.noStroke();
@@ -60,6 +54,25 @@ public class paris extends Visual{
     
     //Start of the draw render
     void render() {
+
+         //calulating average
+         float avg = 0;
+         for (int i = 0; i < ab.size(); i++)
+         {
+             avg += abs(ab.get(i));
+         }
+         avg = avg / ab.size();
+         float smoothedavg = 0;
+         smoothedavg = lerp(smoothedavg, avg, 0.1f);
+ 
+        
+        float a, b;  // these are the position of the heart
+        float va, vb;  
+        float ac, bd;  
+        float damping = 1;  // damping factor for the bouncing motion of the hearts
+        boolean isBouncingA = false; 
+        boolean isBouncingB = false; //  to indicate whether the heart is bouncing off the X or Y edge
+
         a = random(width);  // set initial a,b position and velocity at random
         b = random(height);  
         va = random(-10, 10);  
@@ -67,6 +80,8 @@ public class paris extends Visual{
         ac = 0;
         bd = 0;
         paris.background(color(255, 192, 203, 200));
+
+        paris.ellipse(width + 200, height + 100 , 300 + (smoothedavg*600) , 300 + (smoothedavg*600));
 
         mainHeart(a, b, 0, 0); // draw the main heart
         tinyHeart(a, b, 0, 0); // draw the tiny hearts
