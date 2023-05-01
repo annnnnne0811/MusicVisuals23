@@ -25,6 +25,7 @@ public class Airish extends Visual {
             airish.line(160,80,160,100);
 
             //mountains
+            airish.fill(255);
             airish.triangle(45,400,500,400,250,50);
             airish.triangle(100,400,500,400,400,20);
             
