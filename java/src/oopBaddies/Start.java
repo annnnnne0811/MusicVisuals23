@@ -110,8 +110,6 @@ public class Start extends Visual{
             popMatrix();
 
 
-            
-
             break;
 
 
