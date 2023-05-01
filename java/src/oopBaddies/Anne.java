@@ -6,6 +6,7 @@ import ie.tudublin.Visual;
 public class Anne extends Visual
 {
     Start anne;
+    float theta = 0;
 
     //Variables for the rain 
     int rain = 100 ;    //this will give a random amount of rain instead of it being limited
@@ -63,18 +64,37 @@ public class Anne extends Visual
 
 
 
-
-
         //for the flowers
 
         anne.pushMatrix();
         anne.smooth();
-        anne.noSmooth();
         anne.frameRate(15);
-    
-        anne.background(179, 158, 181);
+
+
         anne.translate(width/2, height/2);
-        anne.rotate(radians(frameCount));
+
+        //rotates the flowers 
+        anne.rotateY(theta);
+        //anne.rotateX()
+
+        //flower petals
+        anne.ellipse(0,0,50,50);
+
+        anne.ellipse(0, -50, 50, 50); //fisrt
+        anne.rotate(radians(72));
+        anne.rotate(radians(72));
+        anne.ellipse(0, -50, 50, 50);
+        // third petal
+        anne.rotate(radians(72));
+        anne.ellipse(0, -50, 50, 50);
+        // fourth petal
+        anne.rotate(radians(72));
+        anne.ellipse(0, -50, 50, 50);
+        // fifth petal
+        anne.rotate(radians(72));
+        anne.ellipse(0, -50, 50, 50);
+
+        
     
         //Draws 5 petal, rotating after one 
         anne.fill(128, 128, 0);
@@ -82,7 +102,6 @@ public class Anne extends Visual
         {
             anne.ellipse(0, -40, 50, 50);
             anne.rotate(radians(72));               
-    
         }
     
         //centre circle
@@ -116,9 +135,6 @@ public class Anne extends Visual
         cloud(-100, -544, 10, 10* smoothedavg*10);
         cloud(-300, -600, 10, 10* smoothedavg*10);
         cloud(0, -644, 10, 10* smoothedavg*10);
-
-
-
 
 
     }//End of  render 
