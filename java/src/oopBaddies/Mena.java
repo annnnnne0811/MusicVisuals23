@@ -1,6 +1,7 @@
 package oopBaddies;
 
 import ie.tudublin.Visual;
+import jogamp.nativewindow.windows.RGBQUAD;
 
 public class Mena extends Visual {
 
@@ -27,7 +28,7 @@ public class Mena extends Visual {
         float smoothedavg = 0;
         smoothedavg = lerp(smoothedavg, avg, 0.1f);
 
-        mena.colorMode(HSB);
+        mena.colorMode(RGB);
 
         int w = 2000;
         int h = 900;
@@ -54,7 +55,6 @@ public class Mena extends Visual {
 
         //roof
         mena.fill(150, 150, 150);
-        // triangle(x1, y1, x2, y2, x3, y3)
         mena.triangle(100, 600, 300, 400, 300, 100);
 
         //door
@@ -67,23 +67,6 @@ public class Mena extends Visual {
         mena.noStroke(); // remove the stroke
         mena.rect(0, 900, 2000 ,120);
 
-        // car
-        
-        // float carX = 0;
-
-        // carX += 1;
-
-        // mena.pushMatrix();
-        // mena.translate(carX, 200);
-        // mena.fill(255, 0, 255);
-        // mena.rect(0, 0, 100, 50);
-        // mena.rect(10, -20, 50, 20);
-        // mena.rect(60, -20, 30, 20);
-        // mena.fill(0, 0, 255);
-        // mena.ellipse(25, 50, 20, 20);
-        // mena.ellipse(75, 50, 20, 20);
-        // mena.popMatrix();
-
 
          //Drawing a rocket
          mena.translate(CENTER, CENTER);
@@ -92,18 +75,35 @@ public class Mena extends Visual {
          mena.ellipse(w/2, y,100,200);
          mena.fill(175, 100, 220);
         //two circle windows on the rocket and moving the rocket up
-         mena.ellipse(w/2, y+10, 50+(smoothedavg*300), 50+(smoothedavg*300));
-         mena.ellipse(w/2, y-50, 40,40);
+         mena.ellipse(w/2, y+10, 50+(smoothedavg*300), 50);
+         mena.ellipse(w/2, y-50, 40+(smoothedavg*200),40);
          mena.fill(0);
          mena.ellipse(w/2, y+10, 40,40);
          mena.ellipse(w/2, y-50, 30,30);
-
+         mena.ellipse(0, 80, 40, 20); // Draw the engine of the rocket
+        
         // moving the rocket
         y--;
         
         if(y < 0){
             y = 700;
         }
+
+        // drawing a lamp post
+        mena.translate(200, 595); // movig the street light the bottom of the screen
+        mena.fill(200);
+        mena.rect(350, 100, 20, 200);
+        mena.ellipse(360, 90, 40+ (smoothedavg*200), 40);
+        
+        mena.fill(255, 240, 200);
+        mena.ellipse(360, 90, 20+ (smoothedavg*300), 20);
+        mena.strokeWeight(3);
+        mena.stroke(255, 240, 200);
+        mena.line(360, 80, 360, 30);
+        mena.line(345, 90, 375, 90);
+        mena.line(360, 100, 360, 150);
+
+
 
 
         
