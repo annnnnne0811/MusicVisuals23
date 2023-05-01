@@ -13,6 +13,8 @@ public class Mena extends Visual {
 
     }
 
+
+
     void render()
     {
         //calulating average
