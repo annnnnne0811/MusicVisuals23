@@ -55,7 +55,7 @@ public class Mena extends Visual {
 
         //roof
         mena.fill(150, 150, 150);
-        mena.triangle(100, 600, 300, 400, 300, 100);
+        mena.triangle(100, 600, 250, 400, 400, 600);
 
         //door
         mena.fill(255, 0, 255);
@@ -89,7 +89,7 @@ public class Mena extends Visual {
             y = 700;
         }
 
-        // drawing a lamp post
+        // drawing a street lights
         mena.translate(200, 595); // movig the street light the bottom of the screen
         mena.fill(200);
         mena.rect(350, 100, 20, 200);
@@ -103,13 +103,7 @@ public class Mena extends Visual {
         mena.line(345, 90, 375, 90);
         mena.line(360, 100, 360, 150);
 
-
-
-
-        
-
-
-
+    
     }
 
 
