@@ -8,14 +8,6 @@ public class Anne extends Visual
     Start anne;
     float theta = 0;
 
-    //Variables for the rain 
-    int rain = 100 ;    //this will give a random amount of rain instead of it being limited
-    float [] xPos = new float[rain];
-    float [] yPos= new float[rain];
-    float [] speed = new float [rain];    //speed for the rain 
-    Rain [] drop;
-
-
 
     public Anne(Start anne)
     {
@@ -49,6 +41,8 @@ public class Anne extends Visual
 
     //Start of the draw render
     void render()
+
+    
     {
         //calculating the everage amplitude
         float avg = 0;
@@ -68,45 +62,26 @@ public class Anne extends Visual
 
         anne.pushMatrix();
         anne.smooth();
+        anne.noStroke();
         anne.frameRate(15);
 
 
-        anne.translate(width/2, height/2);
+        anne.translate(mouseX, mouseY);
 
         //rotates the flowers 
-        anne.rotateY(theta);
-        //anne.rotateX()
+        anne.rotate(radians(frameCount + mouseX));
 
-        //flower petals
-        anne.ellipse(0,0,50,50);
-
-        anne.ellipse(0, -50, 50, 50); //fisrt
-        anne.rotate(radians(72));
-        anne.rotate(radians(72));
-        anne.ellipse(0, -50, 50, 50);
-        // third petal
-        anne.rotate(radians(72));
-        anne.ellipse(0, -50, 50, 50);
-        // fourth petal
-        anne.rotate(radians(72));
-        anne.ellipse(0, -50, 50, 50);
-        // fifth petal
-        anne.rotate(radians(72));
-        anne.ellipse(0, -50, 50, 50);
-
-        
-    
-        //Draws 5 petal, rotating after one 
-        anne.fill(128, 128, 0);
-        for( int i = 0; i < 5; i++);
+        anne.fill(255);
+        for(int i = 0; i < 5; i++)
         {
             anne.ellipse(0, -40, 50, 50);
-            anne.rotate(radians(72));               
+            anne.rotate(radians(72));
         }
+
     
         //centre circle
         anne.fill(255,255,0);
-        anne.ellipse(0,0, 50, 50);
+        anne.ellipse(0, 0, 50, 50);
     
         anne.popMatrix();
         
