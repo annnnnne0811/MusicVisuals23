@@ -8,6 +8,7 @@ import processing.core.PImage;
 public class Start extends Visual{
     Anne anne = new Anne(this);
     Airish airish = new Airish(this);
+    Mena mena = new mena(this);
     paris paris = new paris(this);
 
     //For menu buttons
@@ -114,6 +115,7 @@ public class Start extends Visual{
             //Mena
             case 3:
             background(0);
+            mena.render();
             break;
 
 
