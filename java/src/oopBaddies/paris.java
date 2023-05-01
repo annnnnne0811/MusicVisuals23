@@ -5,14 +5,14 @@ import processing.core.PVector;
 import java.util.ArrayList; 
 
 
-public class Paris extends Visual{
+public class paris extends Visual{
     
 
     Start paris;
 
     ArrayList<PVector> tinyHearts = new ArrayList<PVector>(); // lists to hold tiny hearts
 
-    public Paris(Start paris) {
+    public paris(Start paris) {
 
         this.paris = paris;
     }
