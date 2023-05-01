@@ -25,6 +25,8 @@ public class Mena extends Visual {
         float smoothedavg = 0;
         smoothedavg = lerp(smoothedavg, avg, 0.1f);
 
+        mena.colorMode(HSB);
+
 
 
         int color = color (255); 
@@ -38,7 +40,7 @@ public class Mena extends Visual {
         //drawing a house
         mena.fill(255, 200, 200);
         // width , height, width by lenght
-        mena.rect(100, 300, 200, 300);
+        mena.rect(100, 600, 300, 300);
 
         //roof
         mena.fill(150, 150, 150);
@@ -60,7 +62,8 @@ public class Mena extends Visual {
         // drawing the grass
         mena.fill(80, 200, 120); // set the fill color to green
         mena.noStroke(); // remove the stroke
-        mena.rect(0, height +400, 600 ,200);
+        mena.rect(0, 900, 2000 ,120);
+       
 
         int w = 1500;
         int h = 800;
