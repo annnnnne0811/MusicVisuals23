@@ -14,6 +14,7 @@ public class Mena extends Visual {
     }
 
     int y = 700;
+    boolean flicker=true;
 
     void render()
     {
@@ -40,24 +41,28 @@ public class Mena extends Visual {
         mena.ellipse(random(w), random(h), 5, 5);
 
         int color = color (255); 
-        // making the yellow
+    
+
         mena.fill(color);
         mena.noStroke();
 
-        // creating the sun
+        // creating the moon
         mena.ellipse(width + 200, height + 100 , 300 + (smoothedavg*600) , 300 + (smoothedavg*600));
 
         //drawing a house
-        mena.fill(255, 200, 200);
-        // width , height, width by lenght
+        mena.fill(173, 216, 230);
         mena.rect(100, 600, 300, 300);
 
-        //roof
-        mena.fill(150, 150, 150);
+        //drawing the roof
+        mena.fill(0, 0, 0); // color grey
         mena.triangle(100, 600, 250, 400, 400, 600);
 
+        // drawing the window 
+        mena.fill(0, 0, 0); // color grey
+        mena.rect(150, 656, 40, 50); // making the rectangle and positioning to the correct place
+        
         //door
-        mena.fill(255, 0, 255);
+        mena.fill(255, 0, 255); //
         mena.rect(200, 800, 100, 200);
 
 
@@ -91,8 +96,8 @@ public class Mena extends Visual {
             y = 700;
         }
 
-        // drawing a street lights
-        mena.translate(200, 595); // movig the street light the bottom of the screen
+        //drawing a street lights
+        mena.translate(200, 595); // moving the street light the bottom of the screen
         mena.fill(200);
         mena.rect(350, 100, 20, 200);
         mena.ellipse(360, 90, 40+ (smoothedavg*200), 40);
@@ -115,7 +120,21 @@ public class Mena extends Visual {
         mena.ellipse(750, 350, 30+(smoothedavg*600) , 30); // Draw a small rock
         mena.ellipse(1250, 350, 40+ (smoothedavg*600), 40); // Draw a larger rock
         mena.ellipse(1400, 380, 60+ (smoothedavg*600), 60); // Draw a medium rock
-  
+        
+        // Draw the lamp post pole
+        mena.fill(200); // Set the fill color to light gray
+        mena.rect(1500, 100, 20, 200); // Draw the pole rectangle
+        
+        // Draw the lamp head
+        mena.fill(255, 255, 204); // Set the fill color to light yellow
+        mena.ellipse(1500, 80, 80, 80); // Draw the head ellipse
+        
+        // Draw the lamp light
+        mena.fill(255, 255, 204, 200); // Set the fill color to semi-transparent light yellow
+        mena.ellipse(1500, 80, 50, 50); // Draw the light ellipse
+        mena.stroke(255, 255, 204); // Set the stroke color to light yellow
+
+
     }
 
 
