@@ -20,12 +20,6 @@ C20477044
 
 C20401536
 
-## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
 The theme we concluded for this assigment was "what we feel when we listen to the song" 
@@ -37,18 +31,6 @@ The song we choose to do for this assignment is a japanese song called "Shinunog
 To achieve this goal, we made a menu that gives the user 4 options 1. Anne, 2.Airish, 3.Mena, 4.Paris , by pressing one of the options it will bring you to one of the programmers thoughts about the song. 
 
 
--- Description of programmers assignment --
-
-
-1. Anne
-
-In Annes assignment it has clouds that go with the beat and flowers rotating 
-
-2. Airish
-
-3. Mena
-
-4. Paris
 
 
 
