@@ -54,25 +54,29 @@ public class Mena extends Visual {
         mena.rect(100, 600, 300, 300);
 
         //drawing the roof
-        mena.fill(0, 0, 0); // color grey
+        mena.fill(139, 69, 19); // color grey
         mena.triangle(100, 600, 250, 400, 400, 600);
 
+
         // drawing the window 
-        mena.fill(0, 0, 0); // color grey
-        mena.rect(150, 656, 40, 50); // making the rectangle and positioning to the correct place
-        
-        //door
-        mena.fill(255, 0, 255); //
+        mena.fill(0, 0, 0); // color black
+        mena.rect(150, 656, 40, 50); // making the first window
+        mena.rect(300, 656, 40, 50); // making the second window
+
+        //drawing the backgroud
+        mena.fill(0, 0, 0); //
         mena.rect(200, 800, 100, 200);
+
+        // drawing the door 
+        mena.fill(200, 200, 200);
+        mena.rect(200, 800, 30, 100);
+
 
 
         // drawing the grass
         mena.fill(80, 200, 120); // set the fill color to green
         mena.noStroke(); // remove the stroke
-        mena.rect(0, 900, 2000 ,120);
-
-
-        
+        mena.rect(0, 900, 2000 ,120);     
 
          //Drawing a rocket
          mena.translate(CENTER, CENTER);
@@ -127,11 +131,11 @@ public class Mena extends Visual {
         
         // Draw the lamp head
         mena.fill(255, 255, 204); // Set the fill color to light yellow
-        mena.ellipse(1500, 80, 80, 80); // Draw the head ellipse
+        mena.ellipse(1500, 80, 80+(smoothedavg*200), 80); // Draw the head ellipse
         
         // Draw the lamp light
         mena.fill(255, 255, 204, 200); // Set the fill color to semi-transparent light yellow
-        mena.ellipse(1500, 80, 50, 50); // Draw the light ellipse
+        mena.ellipse(1500, 80, 50+(smoothedavg*200), 50); // Draw the light ellipse
         mena.stroke(255, 255, 204); // Set the stroke color to light yellow
 
 
