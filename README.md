@@ -1,24 +1,15 @@
 # Music Visualiser Project
 
-Name: 
+Name:			Student Number:  
 
-Mary Anne Flores 
+Mary Anne Flores|| C20461582
 
-Mena Nguyen
+Mena Nguyen		|| C20418324
 
-Airish Reyes
+Airish Reyes	|| C20477044
 
-Paris Le
+Paris Le		|| C20401536
 
-Student Number: 
-
-C20461582
-
-C20418324
-
-C20477044
-
-C20401536
 
 
 # Description of the assignment
