@@ -70,15 +70,14 @@ public class Start extends Visual{
             fill(135,206,250);
             textAlign(CENTER);
             textSize(width/20.0f);
-            
+
 
             //Title
             fill(255);
             text("Shinunoga E-wa by Fujii Kaze\n\n", width/2.0f, height/3.0f);
             textSize(width/25.0f);
 
-
-            //Menu Options
+            
             text("Press 1:Anne", width/2.0f, (height/3.0f) + 60);
             text("Press 2:Airish", width/2.0f, (height/3.0f) + 120);
             text("Press 3:Mena", width/2.0f, (height/3.0f) + 180);
@@ -116,6 +115,9 @@ public class Start extends Visual{
             
 
     }
+    }
+
+    public void triangle(int center) {
     }
 
 

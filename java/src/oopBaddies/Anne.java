@@ -1,11 +1,16 @@
 package oopBaddies;
 
+import java.util.ArrayList;
+
 import ie.tudublin.Visual;
 
 //Start of the main
 public class Anne extends Visual
 {
     Start anne;
+
+
+    ArrayList<flower> particles = new ArrayList<flower>();
 
     public Anne(Start anne)
     {
@@ -27,8 +32,44 @@ public class Anne extends Visual
         anne.ellipse (a+490, b+280, c+40, d+30);
     }
 
+    public void flower(float a, float b, float c, float d)
+    {
 
 
+        //draws the flowers hopfully
+
+        //centre
+        //makes the flower rotate without affecting the others in the background 
+        anne.pushMatrix();
+        anne.smooth();
+        anne.noSmooth();
+
+        //rotates the flower
+        anne.frameRate(15);
+        frameCount++;
+
+        anne.translate(mouseX, mouseY);
+
+       //hopfully rotates the flower
+       anne.rotate(radians(frameCount + mouseX));
+
+       //draws the petals 
+       anne.fill(211, 169, 130);
+       for(int i = 0; i < 5; i++)
+       {
+            anne.ellipse(0, -40, 50, 50);
+            anne.rotate(radians(72));
+       }
+
+       //the center circle of the flower
+       anne.fill(246, 191, 170);
+       anne.ellipse(0,0,50,50);
+
+    }//End of  render 
+
+
+
+    }
 
 
     //draw the ground
@@ -86,6 +127,7 @@ public class Anne extends Visual
         //draws the flowers hopfully
 
         //centre
+        //makes the flower rotate without affecting the others in the background 
         anne.pushMatrix();
         anne.smooth();
         anne.noSmooth();
@@ -94,10 +136,10 @@ public class Anne extends Visual
         anne.frameRate(15);
         frameCount++;
 
-        anne.translate(width/2, height/2);
+        anne.translate(mouseX, mouseY);
 
        //hopfully rotates the flower
-       anne.rotate(radians(frameCount));
+       anne.rotate(radians(frameCount + mouseX));
 
        //draws the petals 
        anne.fill(211, 169, 130);
@@ -110,9 +152,6 @@ public class Anne extends Visual
        //the center circle of the flower
        anne.fill(246, 191, 170);
        anne.ellipse(0,0,50,50);
-
-       anne.popMatrix();
-
 
     }//End of  render 
 
