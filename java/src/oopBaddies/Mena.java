@@ -13,11 +13,7 @@ public class Mena extends Visual {
 
     }
 
-<<<<<<< HEAD
     int y = 700;
-=======
-        int y = 700;
->>>>>>> 788c62731474d209bbf79b390191f2a89b2c3b9c
 
     void render()
     {
