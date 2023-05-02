@@ -28,7 +28,36 @@ C20401536
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
-The song we decided to do for this project was " Shinunoga E-wa" by Fujii Kaze. 
+The theme we concluded for this assigment was "what we feel when we listen to the song" 
+
+
+The song we choose to do for this assignment is a japanese song called "Shinunoga E-wa" by Fujii Kaze, the literal translation for "Shinunoga E-wa" is "I'd rather die", the song is based about how the artist Fuji cant live without the ones he loves. This song is a chill pop song to listen to, the visualizer assignment we did is based on our thoughts and what suited the vibe of the song.
+
+
+To achieve this goal, we made a menu that gives the user 4 options 1. Anne, 2.Airish, 3.Mena, 4.Paris , by pressing one of the options it will bring you to one of the programmers thoughts about the song. 
+
+
+-- Description of programmers assignment --
+
+
+1. Anne
+
+In Annes assignment it has clouds that go with the beat and flowers rotating 
+
+2. Airish
+
+3. Mena
+
+4. Paris
+
+
+
+
+
+
+
+
+
 # Instructions
 The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose.
 # How it works
