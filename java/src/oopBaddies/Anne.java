@@ -10,7 +10,7 @@ public class Anne extends Visual
     public Anne(Start anne)
     {
         this.anne = anne;
-        
+        frameCount = 0;
     }
 
     //fucntion to draw the clouds
@@ -88,8 +88,11 @@ public class Anne extends Visual
         //centre
         anne.pushMatrix();
         anne.smooth();
-        anne.noStroke();
+        anne.noSmooth();
+
+        //rotates the flower
         anne.frameRate(15);
+        frameCount++;
 
         anne.translate(width/2, height/2);
 
