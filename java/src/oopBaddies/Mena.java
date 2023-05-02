@@ -1,7 +1,6 @@
 package oopBaddies;
 
 import ie.tudublin.Visual;
-import jogamp.nativewindow.windows.RGBQUAD;
 
 public class Mena extends Visual {
 
@@ -14,11 +13,7 @@ public class Mena extends Visual {
 
     }
 
-<<<<<<< HEAD
-
-=======
-        int y = 700;
->>>>>>> ebd65671e447fedf962e21408f5b7dc3e770b79e
+    int y = 700;
 
     void render()
     {
@@ -72,6 +67,8 @@ public class Mena extends Visual {
         mena.rect(0, 900, 2000 ,120);
 
 
+        
+
          //Drawing a rocket
          mena.translate(CENTER, CENTER);
          mena.fill(255);
@@ -89,7 +86,7 @@ public class Mena extends Visual {
         
         // moving the rocket
         y--;
-        
+
         if(y < 0){
             y = 700;
         }
