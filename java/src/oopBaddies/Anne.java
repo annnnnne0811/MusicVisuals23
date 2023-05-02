@@ -6,8 +6,6 @@ import ie.tudublin.Visual;
 public class Anne extends Visual
 {
     Start anne;
-    float theta = 0;
-
 
     public Anne(Start anne)
     {
@@ -30,6 +28,9 @@ public class Anne extends Visual
     }
 
 
+
+
+
     //draw the ground
     public void ground(int a, int b, int c, int d)
     {
@@ -41,8 +42,6 @@ public class Anne extends Visual
 
     //Start of the draw render
     void render()
-
-    
     {
         //calculating the everage amplitude
         float avg = 0;
@@ -55,35 +54,6 @@ public class Anne extends Visual
         smoothedavg = lerp(smoothedavg, avg , 0.1f);
 
         anne.colorMode(HSB);
-
-
-
-        //for the flowers
-
-        anne.pushMatrix();
-        anne.smooth();
-        anne.noStroke();
-        anne.frameRate(15);
-
-
-        anne.translate(mouseX, mouseY);
-
-        //rotates the flowers 
-        anne.rotate(radians(frameCount + mouseX));
-
-        anne.fill(255);
-        for(int i = 0; i < 5; i++)
-        {
-            anne.ellipse(0, -40, 50, 50);
-            anne.rotate(radians(72));
-        }
-
-    
-        //centre circle
-        anne.fill(255,255,0);
-        anne.ellipse(0, 0, 50, 50);
-    
-        anne.popMatrix();
         
 
         //the ground
@@ -110,6 +80,35 @@ public class Anne extends Visual
         cloud(-100, -544, 10, 10* smoothedavg*10);
         cloud(-300, -600, 10, 10* smoothedavg*10);
         cloud(0, -644, 10, 10* smoothedavg*10);
+
+
+
+        //draws the flowers hopfully
+
+        //centre
+        anne.pushMatrix();
+        anne.smooth();
+        anne.noStroke();
+        anne.frameRate(15);
+
+        anne.translate(width/2, height/2);
+
+       //hopfully rotates the flower
+       anne.rotate(radians(frameCount));
+
+       //draws the petals 
+       anne.fill(211, 169, 130);
+       for(int i = 0; i < 5; i++)
+       {
+            anne.ellipse(0, -40, 50, 50);
+            anne.rotate(radians(72));
+       }
+
+       //the center circle of the flower
+       anne.fill(246, 191, 170);
+       anne.ellipse(0,0,50,50);
+
+       anne.popMatrix();
 
 
     }//End of  render 
