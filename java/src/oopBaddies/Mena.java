@@ -71,6 +71,7 @@ public class Mena extends Visual {
          //Drawing a rocket
          mena.translate(CENTER, CENTER);
          mena.fill(255);
+         mena.triangle(950, y+100, 1000, y-10, 1050, y+100); // bottom of the rocket
         //an oval shape of the rocket and moving the rocket up
          mena.ellipse(w/2, y,100,200);
          mena.fill(175, 100, 220);
@@ -103,7 +104,17 @@ public class Mena extends Visual {
         mena.line(345, 90, 375, 90);
         mena.line(360, 100, 360, 150);
 
-    
+        mena.fill(0, 204, 204); // Set the fill color to dark blue
+        mena.noStroke(); // Turn off the stroke
+  
+        // Draw the pond
+        mena.ellipse(1000, 400, 450+ (smoothedavg*600), 200); // Draw the main body of water
+
+        mena.fill(102, 102, 102); // Set the fill color to gray
+        mena.ellipse(750, 350, 30+(smoothedavg*600) , 30); // Draw a small rock
+        mena.ellipse(1250, 350, 40+ (smoothedavg*600), 40); // Draw a larger rock
+        mena.ellipse(1400, 380, 60+ (smoothedavg*600), 60); // Draw a medium rock
+  
     }
 
 
