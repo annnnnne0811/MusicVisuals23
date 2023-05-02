@@ -1,5 +1,6 @@
 package oopBaddies;
 import ie.tudublin.Visual;
+import processing.core.PVector;
 
 //main class
 public class Airish extends Visual {
@@ -30,6 +31,46 @@ public class Airish extends Visual {
             
     }
 
+    public void ferriswheel(int a, int b, int c, int d)
+    {
+        float z = 0;
+        //main wheel of ferriswheel
+        airish.ellipse(0, 0, 200, 200);
+
+        //frame
+        airish.triangle(0,0,75,130,-75,130);
+
+        //Spokes in wheel
+        rotate(z);
+        for(int i = 0; i < 18; i++)
+        {
+            airish.rotateZ(PI/9);
+            airish.line(0,0,0,100);
+        }
+
+        //carriages from ferris wheel
+        for(int j = 0; j<6; j++)
+        {
+            airish.rotate(PI/3);
+            airish.translate(0,100,0);
+            airish.rotate(-z);
+            airish.pushMatrix();
+            airish.rotateZ(radians(-60*j));
+            airish.rotateZ(radians(-60));
+            airish.fill(10,150,255);
+            airish.triangle(0,0,5,10,-5,10);
+            airish.fill(255,150,10);
+            airish.popMatrix();
+            airish.rotate(z);
+            airish.translate(0, -100, 0);
+        }
+
+        z = z-(PI/700);
+        println("X: " + mouseX + " Y: " + mouseY);
+
+    }
+
+
     void render()
     {
         {
@@ -46,8 +87,11 @@ public class Airish extends Visual {
             airish.colorMode(RGB);
         }
 
+
          //mountains
          mount(45,400,500,400);
+         //ferriswheel
+         ferriswheel(0,0,200,200);
        //  mount(-100,400,500,400 );
 
         //borderline colour of mountains
