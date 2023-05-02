@@ -1,7 +1,6 @@
 package oopBaddies;
 
 import ie.tudublin.Visual;
-import jogamp.nativewindow.windows.RGBQUAD;
 
 public class Mena extends Visual {
 
@@ -14,11 +13,7 @@ public class Mena extends Visual {
 
     }
 
-<<<<<<< HEAD
-
-=======
         int y = 700;
->>>>>>> ebd65671e447fedf962e21408f5b7dc3e770b79e
 
     void render()
     {
