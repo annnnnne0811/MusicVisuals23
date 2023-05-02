@@ -1,6 +1,6 @@
 package oopBaddies;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import ie.tudublin.Visual;
 
@@ -10,7 +10,7 @@ public class Anne extends Visual
     Start anne;
 
 
-    ArrayList<flower> particles = new ArrayList<flower>();
+    //ArrayList<flower> particles = new ArrayList<flower>();
 
     public Anne(Start anne)
     {
@@ -69,7 +69,7 @@ public class Anne extends Visual
 
 
 
-    }
+    
 
 
     //draw the ground

@@ -1,11 +1,15 @@
 package oopBaddies;
 import ie.tudublin.Visual;
-import processing.core.PVector;
+//import processing.core.PVector;
 
 //main class
 public class Airish extends Visual {
 
     Start airish;
+
+    //ferriswheel
+    float z = 0;
+
     //constructor
 
     public Airish(Start airish) 
@@ -33,7 +37,7 @@ public class Airish extends Visual {
 
     public void ferriswheel(int a, int b, int c, int d)
     {
-        float z = 0;
+
         //main wheel of ferriswheel
         airish.ellipse(0, 0, 200, 200);
 
@@ -41,7 +45,7 @@ public class Airish extends Visual {
         airish.triangle(0,0,75,130,-75,130);
 
         //Spokes in wheel
-        rotate(z);
+       // rotate(z);
         for(int i = 0; i < 18; i++)
         {
             airish.rotateZ(PI/9);
@@ -51,18 +55,22 @@ public class Airish extends Visual {
         //carriages from ferris wheel
         for(int j = 0; j<6; j++)
         {
+            airish.pushMatrix();
             airish.rotate(PI/3);
             airish.translate(0,100,0);
             airish.rotate(-z);
-            airish.pushMatrix();
+            
             airish.rotateZ(radians(-60*j));
             airish.rotateZ(radians(-60));
             airish.fill(10,150,255);
             airish.triangle(0,0,5,10,-5,10);
             airish.fill(255,150,10);
+
             airish.popMatrix();
             airish.rotate(z);
             airish.translate(0, -100, 0);
+
+            //airish.popMatrix();
         }
 
         z = z-(PI/700);
