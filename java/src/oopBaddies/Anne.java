@@ -9,6 +9,9 @@ public class Anne extends Visual
 {
     Start anne;
 
+    int flowerX;
+    int flowerY;
+
 
     //ArrayList<flower> particles = new ArrayList<flower>();
 
@@ -16,6 +19,10 @@ public class Anne extends Visual
     {
         this.anne = anne;
         frameCount = 0;
+
+
+
+        
     }
 
     //fucntion to draw the clouds
@@ -32,45 +39,8 @@ public class Anne extends Visual
         anne.ellipse (a+490, b+280, c+40, d+30);
     }
 
-    public void flower(float a, float b, float c, float d)
-    {
-
-
-        //draws the flowers hopfully
-
-        //centre
-        //makes the flower rotate without affecting the others in the background 
-        anne.pushMatrix();
-        anne.smooth();
-        anne.noSmooth();
-
-        //rotates the flower
-        anne.frameRate(15);
-        frameCount++;
-
-        anne.translate(mouseX, mouseY);
-
-       //hopfully rotates the flower
-       anne.rotate(radians(frameCount + mouseX));
-
-       //draws the petals 
-       anne.fill(211, 169, 130);
-       for(int i = 0; i < 5; i++)
-       {
-            anne.ellipse(0, -40, 50, 50);
-            anne.rotate(radians(72));
-       }
-
-       //the center circle of the flower
-       anne.fill(246, 191, 170);
-       anne.ellipse(0,0,50,50);
-
-    }//End of  render 
-
-
 
     
-
 
     //draw the ground
     public void ground(int a, int b, int c, int d)
@@ -78,6 +48,7 @@ public class Anne extends Visual
         
         anne.fill(170, 150, 146, 240);
         anne.rect(0, 900, 2000, 120);
+
     }
 
 
@@ -124,7 +95,11 @@ public class Anne extends Visual
 
 
 
+
+
         //draws the flowers hopfully
+
+        //Flower 1
 
         //centre
         //makes the flower rotate without affecting the others in the background 
@@ -136,10 +111,12 @@ public class Anne extends Visual
         anne.frameRate(15);
         frameCount++;
 
+
+
         anne.translate(mouseX, mouseY);
 
        //hopfully rotates the flower
-       anne.rotate(radians(frameCount + mouseX));
+       anne.rotate(radians(frameCount + flowerX));
 
        //draws the petals 
        anne.fill(211, 169, 130);
@@ -152,6 +129,47 @@ public class Anne extends Visual
        //the center circle of the flower
        anne.fill(246, 191, 170);
        anne.ellipse(0,0,50,50);
+
+
+       anne.popMatrix();
+
+
+
+       // Start of Flower 2
+        //makes the flower rotate without affecting the others in the background 
+        anne.pushMatrix();
+        anne.smooth();
+        anne.noSmooth();
+
+        //rotates the flower
+        anne.frameRate(15);
+        frameCount++;
+
+
+
+       anne.translate(mouseX, mouseY);
+
+       //hopfully rotates the flower
+       anne.rotate(radians(frameCount + flowerX));
+       anne.translate(-200,0);
+
+       //draws the petals 
+       anne.fill(255, 0, 0);
+       for(int i = 0; i < 5; i++)
+       {
+            anne.ellipse(0, -40, 50, 50);
+        //    anne.ellipse(0, -50, 60, 60);
+            anne.rotate(radians(75));
+       }
+
+       //the center circle of the flower
+       anne.fill(246, 191, 170);
+       anne.ellipse(0,0,50,50);
+
+
+       //End of the popMatrix flower 2
+       anne.popMatrix();
+
 
     }//End of  render 
 
