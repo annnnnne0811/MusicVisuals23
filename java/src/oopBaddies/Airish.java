@@ -23,7 +23,7 @@ public class Airish extends Visual {
     int i=1;
     int j=1;
     int n=300;
-    int d=1;
+    int a=1;
     float theta;
     float h;
 
@@ -92,15 +92,15 @@ public class Airish extends Visual {
         
     
         //moving the background 
-        n-=0.1f;
-        if(n==-0.5f)
-        {
-            n = 1;
+        //n-=0.1f;
+        //if(n==-0.5f)
+        //{
+            //n = 1;
 
-        }//end if
+        //}//end if
         
         //
-        d++;
+        //a++;
 
         airish.size(640, 360);
         airish.frameRate(30);
