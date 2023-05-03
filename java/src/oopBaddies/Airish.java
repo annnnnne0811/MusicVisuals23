@@ -22,51 +22,9 @@ public class Airish extends Visual {
     int n=300;
     int a=1;
     float theta;
-
-    public void setup()
-    {
-        size(640, 360);
-    }
-
-    public void draw()
-    {
-        airish.frameRate(30);
-        airish.stroke(255);
-
-        float a = (mouseX / (float) width) * 90f;
-        theta = radians(a);
-        airish.translate(width/2, height);
-        airish.line(0,0,0,-120);
-        airish.translate(0,-120);
-        branch(120);
-
-    }
-
-    void branch(float h)
-    {
-        h *= 0.66;
-
-        if(h > 2)
-        {
-            airish.pushMatrix();
-            airish.rotate(theta);
-            airish.line(0, 0, 0, -h);
-            airish.translate(0, -h);
-            branch(h);
-            airish.popMatrix();
-
-            airish.pushMatrix();
-            airish.rotate(-theta);
-            airish.line(0,0,0, -h);
-            airish.translate(0, -h);
-            branch(h);
-            airish.popMatrix();
-
-        }//end if
-    }
+    float h;
 
     
-
     void render()
     {
 
@@ -85,8 +43,41 @@ public class Airish extends Visual {
 
         airish.background(0);//black background
 
+        airish.size(640, 360);
+        airish.frameRate(30);
+        airish.stroke(255);
+
+        float a = (mouseX / (float) width) * 90f;
+        theta = radians(a);
+        airish.translate(airish.width/2, airish.height);
+        airish.line(0,0,0,-120);
+        airish.translate(0,-120);
+        //branch(120);
+
+
         //call branch function
-        branch(120);
+        //branch(120);
+
+
+        h *= 0.66;
+
+        if(h > 2)
+        {
+            airish.pushMatrix();
+            airish.rotate(theta);
+            airish.line(0, 0, 0, -h);
+            airish.translate(0, -h);
+            //branch(h);
+            airish.popMatrix();
+
+            airish.pushMatrix();
+            airish.rotate(-theta);
+            airish.line(0,0,0, -h);
+            airish.translate(0, -h);
+            //branch(h);
+            airish.popMatrix();
+
+        }//end if
         
 
        //draw butterfly
