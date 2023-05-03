@@ -1,14 +1,21 @@
 package oopBaddies;
 import ie.tudublin.Visual;
 //import processing.core.PVector;
+<<<<<<< HEAD
+=======
+import processing.core.PVector;
+>>>>>>> 4212f3f014a559382d3d584548fef694390fdd62
 
 //main class
 public class Airish extends Visual {
 
     Start airish;
 
+<<<<<<< HEAD
     //ferriswheel
     float z = 0;
+=======
+>>>>>>> 4212f3f014a559382d3d584548fef694390fdd62
 
     //constructor
 
@@ -41,8 +48,16 @@ public class Airish extends Visual {
         //main wheel of ferriswheel
         airish.ellipse(0, 0, 200, 200);
 
+<<<<<<< HEAD
         //frame
         airish.triangle(0,0,75,130,-75,130);
+=======
+    }
+
+    void branch(float h)
+    {
+        h *= 0.66;
+>>>>>>> 4212f3f014a559382d3d584548fef694390fdd62
 
         //Spokes in wheel
        // rotate(z);
@@ -70,12 +85,23 @@ public class Airish extends Visual {
             airish.rotate(z);
             airish.translate(0, -100, 0);
 
+<<<<<<< HEAD
             //airish.popMatrix();
         }
 
         z = z-(PI/700);
         println("X: " + mouseX + " Y: " + mouseY);
 
+=======
+            airish.pushMatrix();
+            airish.rotate(-theta);
+            airish.line(0,0,0, -h);
+            airish.translate(0, -h);
+            branch(h);
+            airish.popMatrix();
+
+        }//end if
+>>>>>>> 4212f3f014a559382d3d584548fef694390fdd62
     }
 
 
@@ -102,6 +128,7 @@ public class Airish extends Visual {
          ferriswheel(0,0,200,200);
        //  mount(-100,400,500,400 );
 
+<<<<<<< HEAD
         //borderline colour of mountains
         airish.stroke(211);
         //inside colour of mountains
@@ -131,6 +158,10 @@ public class Airish extends Visual {
         airish.line(-45, 45, -30, 30);
         airish.line(45, 45, 30, 30);
 
+=======
+        //call branch function
+        branch(120);
+>>>>>>> 4212f3f014a559382d3d584548fef694390fdd62
         
         airish.popMatrix();
         airish.noFill();
