@@ -17,7 +17,7 @@ public class paris extends Visual{
     
     
     int cols, rows;
-    int scl = 20;
+    int scl = 30;
     int w = 6000;
     int h = 1900;
 
@@ -48,9 +48,9 @@ paris.background(10, 20, 50);
 paris.stroke(255);
 paris.noFill();
 
-paris.fill(255);
+paris.fill(random(255), random(255), random(255),300);
 paris.noStroke();
-paris.ellipse(random(w), random(h), 5, 5);
+paris.ellipse(random(w), random(h), 20, 20);
 
 paris.pushMatrix();
 paris.translate(width/2, height/2+50);
@@ -74,10 +74,6 @@ for (int y = 0; y < rows-1; y++) {
 paris.popMatrix();
 
 // Draw grey circle in the center
-paris.noStroke();
-paris.fill(158);
-paris.translate(0, -100);
-paris.ellipse(width/2, height/2, 400, 175);
 
 // Draw orange sphere on the top
 paris.pushMatrix();
@@ -132,12 +128,21 @@ paris.bezierVertex(30, -100, 0, -80, 0, -50);
 paris.endShape(CLOSE);
 paris.popMatrix();
 
-// Draw white oval on the top of the grey circle
+// testing
+
 paris.pushMatrix();
-paris.translate(width/2, height/2);
-paris.fill(255, 255, 255, 150);
+paris.translate(+700, +110);
+paris.fill(random(255), random(255), random(255));
 paris.noStroke();
-paris.ellipse(0, -30, 250, 140);
+paris.beginShape();
+paris.vertex(0, -50, 0);
+paris.bezierVertex(0, -80, -30, -100, -60, -100);
+paris.bezierVertex(-90, -100, -90, -50, -90, -50);
+paris.bezierVertex(-90, -20, -70, 0, 0, 30);
+paris.bezierVertex(70, 0, 90, -20, 90, -50);
+paris.bezierVertex(90, -50, 90, -100, 60, -100);
+paris.bezierVertex(30, -100, 0, -80, 0, -50);
+paris.endShape(CLOSE);
 paris.popMatrix();
 
     }
