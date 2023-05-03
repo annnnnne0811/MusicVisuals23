@@ -1,7 +1,5 @@
 package oopBaddies;
 import ie.tudublin.Visual;
-//import processing.core.PVector;
-//import processing.core.PVector;
 
 //main class
 public class Airish extends Visual {
