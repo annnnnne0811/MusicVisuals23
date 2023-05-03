@@ -1,7 +1,7 @@
 package oopBaddies;
 import ie.tudublin.Visual;
 //import processing.core.PVector;
-import processing.core.PVector;
+//import processing.core.PVector;
 
 //main class
 public class Airish extends Visual {
@@ -43,8 +43,35 @@ public class Airish extends Visual {
 
         airish.background(0);//black background
 
-        airish.size(640, 360);
-        airish.frameRate(30);
+        //airish.size(640, 360);
+        //airish.frameRate(30);
+        
+
+       //draw butterfly
+       airish.stroke (255) ;
+       airish.strokeWeight(2);
+    
+       airish.stroke (255) ;
+       airish.strokeWeight(3);
+       airish.fill(c, 255, 255);
+       airish.quad (airish.mouseX-60, airish.mouseY-70, airish.mouseX-10, airish.mouseY-50,airish.mouseX,airish.mouseY,airish.mouseX-40,airish.mouseY-10);
+       airish.quad (airish.mouseX+60, airish.mouseY-70, airish.mouseX+10, airish.mouseY-50, airish.mouseX, airish.mouseY, airish.mouseX+40, airish.mouseY-10);
+       airish.fill (c, 255, 255);
+       airish.quad (airish.mouseX-60, airish.mouseY+40, airish.mouseX-40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX-18, airish.mouseY+30);
+       airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10,airish.mouseY+30);
+        
+    
+        //moving the background 
+        n-=0.1f;
+        if(n==-0.5f)
+        {
+            n = 1;
+
+        }//end if
+        
+        //
+        a++;
+
         airish.stroke(255);
 
         float a = (mouseX / (float) width) * 90f;
@@ -78,32 +105,6 @@ public class Airish extends Visual {
             airish.popMatrix();
 
         }//end if
-        
-
-       //draw butterfly
-       airish.stroke (255) ;
-       airish.strokeWeight(2);
-    
-       airish.stroke (255) ;
-       airish.strokeWeight(3);
-       airish.fill(c, 255, 255);
-       airish.quad (airish.mouseX-60, airish.mouseY-70, airish.mouseX-10, airish.mouseY-50,airish.mouseX,airish.mouseY,airish.mouseX-40,airish.mouseY-10);
-       airish.quad (airish.mouseX+60, airish.mouseY-70, airish.mouseX+10, airish.mouseY-50, airish.mouseX, airish.mouseY, airish.mouseX+40, airish.mouseY-10);
-       airish.fill (c, 255, 255);
-       airish.quad (airish.mouseX-60, airish.mouseY+40, airish.mouseX-40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX-18, airish.mouseY+30);
-       airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10,airish.mouseY+30);
-        
-    
-        //moving the background 
-        n-=0.1f;
-        if(n==-0.5f)
-        {
-            n = 1;
-
-        }//end if
-        
-        //
-        a++;
 
         
     }//end render()
