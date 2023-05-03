@@ -81,6 +81,8 @@ public class Anne extends Visual
     //Funtion to draw the flower 
     public void flowers()
     {
+
+        //flower 1
         //makes the flower rotate without affecting the background
         anne.pushMatrix();
         anne.smooth();
@@ -108,8 +110,125 @@ public class Anne extends Visual
         anne.fill(173, 174, 179);
         anne.ellipse(0,0,50,50);
 
+
         //end of the pushMatrix
         anne.popMatrix();
+
+
+
+
+
+        //flower 2
+        //makes the flower rotate without affecting the background
+        anne.pushMatrix();
+        anne.smooth();
+        anne.noSmooth();
+
+        //rotates the flower
+        anne.frameRate(30);
+        frameCount++;
+
+        anne.translate(anne.width/2, anne.height/2);
+        anne.translate(-200,100);
+
+        //makes the flower rotate maybe this time???
+        anne.rotate(radians(frameCount + flowerX));
+
+        //draws the flower petals
+        anne.fill(242, 137, 151);
+        for(int i = 0; i < 5; i++)
+        {
+            //ellipse(x-co, y-co, width, height)
+            anne.ellipse(0 , -40, 50, 50);
+            anne.rotate(radians(72));
+        }
+
+        //the center of the flower
+        anne.fill(173, 174, 179);
+        anne.ellipse(0,0,50,50);
+
+
+        //end of the pushMatrix
+        anne.popMatrix();
+
+
+
+
+        //flower 3
+        //makes the flower rotate without affecting the background
+        anne.pushMatrix();
+        anne.smooth();
+        anne.noSmooth();
+
+        //rotates the flower
+        anne.frameRate(25);
+        frameCount++;
+
+        anne.translate(anne.width/2, anne.height/2);
+        anne.translate(200,200);
+
+        //makes the flower rotate maybe this time???
+        anne.rotate(radians(frameCount + flowerX));
+
+        //draws the flower petals
+        anne.fill(242, 137, 151);
+        for(int i = 0; i < 5; i++)
+        {
+            //ellipse(x-co, y-co, width, height)
+            anne.ellipse(0 , -40, 50, 50);
+            anne.rotate(radians(72));
+        }
+
+        //the center of the flower
+        anne.fill(173, 174, 179);
+        anne.ellipse(0,0,50,50);
+
+
+        //end of the pushMatrix
+        anne.popMatrix();
+
+
+
+
+
+        //flower 4
+        //makes the flower rotate without affecting the background
+        anne.pushMatrix();
+        anne.smooth();
+        anne.noSmooth();
+
+        //rotates the flower
+        anne.frameRate(15);
+        frameCount++;
+
+        anne.translate(anne.width/2, anne.height/2);
+        anne.translate(-400,50);
+
+        //makes the flower rotate maybe this time???
+        anne.rotate(radians(frameCount + flowerX));
+
+        //draws the flower petals
+        anne.fill(242, 137, 151);
+        for(int i = 0; i < 5; i++)
+        {
+            //ellipse(x-co, y-co, width, height)
+            anne.ellipse(0 , -40, 50, 50);
+            anne.rotate(radians(72));
+        }
+
+        //the center of the flower
+        anne.fill(173, 174, 179);
+        anne.ellipse(0,0,50,50);
+
+
+        //end of the pushMatrix
+        anne.popMatrix();
+
+
+
+
+
+
 
     } //End of the funtion to draw the flower 
 
