@@ -8,10 +8,17 @@ public class Anne extends Visual
 {
     Start anne;
 
+
+    int flowerX;
+    int flowerY;
+
     public Anne(Start anne)
     //start of public Anne
     {
         this.anne = anne;
+
+        //used to make the flower add more circles for the flower petals
+        frameCount = 0;
 
     //End of the public anne
     }
@@ -36,10 +43,11 @@ public class Anne extends Visual
 
 
     //function to draw the ground
-    public void ground(int a, int b, int c, int d)
+    //rect(x-co, y-co, width, height)
+    public void ground()
     {
         anne.fill(170, 150, 146, 240);
-        anne.rect(0, 900, 2000, 120);
+        anne.rect(0, 850, 2000, 500);
 
     }//End of funtion to draw ground
 
@@ -47,15 +55,67 @@ public class Anne extends Visual
 
     //funtion to draw the sun 
     //ellipse(x-co, y-co, width, height)
-    public void sun(float a, float b)
+    public void sun()
     {
+        anne.pushMatrix();
+        anne.smooth();
+        anne.noSmooth();
+
+
+        
+      //anne.translate(width/2, height/2);
+      //rotates the sun for real this time   PLEASE
+      // float angle = radians(frameCount % 360); 
+      //anne.rotate(angle);
+
+        anne.fill(245,187,87);
         anne.ellipse(224, 184, 220, 220);
+
+
+        anne.popMatrix();
 
     }//end of the function to draw the sun 
 
 
 
-    //Start of the draw render 
+    //Funtion to draw the flower 
+    public void flowers()
+    {
+        //makes the flower rotate without affecting the background
+        anne.pushMatrix();
+        anne.smooth();
+        anne.noSmooth();
+
+        //rotates the flower
+        anne.frameRate(15);
+        frameCount++;
+
+        anne.translate(anne.width/2, anne.height/2);
+
+        //makes the flower rotate maybe this time???
+        anne.rotate(radians(frameCount + flowerX));
+
+        //draws the flower petals
+        anne.fill(211, 169, 130);
+        for(int i = 0; i < 5; i++)
+        {
+            anne.ellipse(0 , -40, 50, 50);
+            anne.rotate(radians(72));
+        }
+
+        //the center of the flower
+        anne.fill(246, 191, 170);
+        anne.ellipse(0,0,50,50);
+
+        //end of the pushMatrix
+        anne.popMatrix();
+
+
+    } //End of the funtion to draw the flower 
+
+
+
+    //Start of the draw render
     void render()
     {
         //Calculating the average amplitude 
@@ -68,16 +128,34 @@ public class Anne extends Visual
         float smoothedavg = 0;
         smoothedavg = lerp(smoothedavg, avg, 0.01f);
 
-        anne.colorMode(HSB);
+        anne.colorMode(RGB);
 
+        //renders the sun 
+        sun();
+
+
+
+
+        //renders the flower maybe??
+        flowers();
+
+
+
+
+        //render the ground
+        ground();
+
+
+
+        //render for the clouds 
         anne.fill(0,10);
         anne.fill(255);
         anne.noStroke();
 
         //making the circle bigger representing the height anf width
-        if( anne.frameCount % 30 ==  00)
+        if( anne.frameCount % 70 ==  00)
         {
-            anne.ellipse((anne.width), (anne.height), smoothedavg, smoothedavg);
+            anne.ellipse((anne.width),(anne.height), smoothedavg, smoothedavg);
         }
 
         anne.translate(anne.width/2, anne.height/2,0);
@@ -92,13 +170,8 @@ public class Anne extends Visual
 
 
 
-        //render the ground
-        ground(0, 530, 600, 530);
 
 
-
-        //renders the sun 
-        sun(224, 184);
 
     
 
