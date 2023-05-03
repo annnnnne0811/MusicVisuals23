@@ -88,15 +88,19 @@ public class Airish extends Visual {
         
     
         //moving the background 
-        n-=0.1f;
-        if(n==-0.5f)
-        {
-            n = 1;
+        //n-=0.1f;
+        //if(n==-0.5f)
+        //{
+            //n = 1;
 
-        }//end if
+        //}//end if
         
         //
+<<<<<<< HEAD
         a++;
+=======
+        //a++;
+>>>>>>> ee1679003b2fc6d8f1c4b7adad06890a4ee37028
 
         airish.frameRate(30);
         airish.stroke(255);
