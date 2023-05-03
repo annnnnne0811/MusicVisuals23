@@ -48,33 +48,6 @@ public class Anne extends Visual
 
     }
 
-    public void keyPressed()
-    {
-        if (key == '9')
-        {
-            if (rain == 9)
-            {
-                rain = 255;
-            }
-            else
-            {
-                rain = 0;
-            }
-        }
-    }
-
-    public void raindrop()
-    {
-        anne.fill(rain);
-        anne.rect(25, 25, 50, 50); 
-
-    }
-
-
-
-
-
-
     //Start of the draw render
     void render()
     {
@@ -115,13 +88,6 @@ public class Anne extends Visual
         cloud(-100, -544, 10, 10* smoothedavg*10);
         cloud(-300, -600, 10, 10* smoothedavg*10);
         cloud(0, -644, 10, 10* smoothedavg*10);
-
-
-
-        //calls the rain hopefully
-        raindrop();
-
-
 
 
         //draws the flowers hopfully
