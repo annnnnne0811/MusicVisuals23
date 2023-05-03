@@ -172,10 +172,8 @@ public class Airish extends Visual {
 
 
 
-
-
-
         //draw butterfly
+        airish.pushMatrix();
         airish.stroke (255) ;
         airish.strokeWeight(2);
     
@@ -187,9 +185,7 @@ public class Airish extends Visual {
         airish.fill (c, 255, 255);
         airish.quad (airish.mouseX-60, airish.mouseY+40, airish.mouseX-40, airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX-18, airish.mouseY+30);
         airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40, airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10, airish.mouseY+30);
-        
-        
-    
+        airish.popMatrix();
     }
 
     
