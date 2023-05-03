@@ -12,6 +12,15 @@ public class Anne extends Visual
     int flowerX;
     int flowerY;
 
+    int frameCount1 = 0;
+    int frameCount2 = 0;
+
+    //for the sun 
+    float sunRotation = 0;
+
+
+
+
     int rain = 0;
 
 
@@ -19,6 +28,8 @@ public class Anne extends Visual
     {
         this.anne = anne;
         frameCount = 0;
+        frameCount1 = 0;
+        frameCount2 = 0;
 
 
 
@@ -48,6 +59,8 @@ public class Anne extends Visual
 
     }
 
+
+    
     //Start of the draw render
     void render()
     {
@@ -64,8 +77,16 @@ public class Anne extends Visual
         anne.colorMode(HSB);
         
 
+        //sun
+        //sun(-100,100);
+
+        //flower
+        //flower(-200,0);
+  
         //the ground
         ground(0,530,600,530);
+
+
 
 
         //The bigger the fill the faster it goes
@@ -82,197 +103,36 @@ public class Anne extends Visual
         anne.translate(anne.width/2, anne.height/2,0);
 
         //the clouds
-        cloud(-600, -544, 10, 10* smoothedavg*10);
-        cloud(-800, -644, 10, 10* smoothedavg*10);
-        cloud(-1000, -644, 10, 10* smoothedavg*10);
-        cloud(-100, -544, 10, 10* smoothedavg*10);
-        cloud(-300, -600, 10, 10* smoothedavg*10);
-        cloud(0, -644, 10, 10* smoothedavg*10);
+        cloud(-600, -544, 10, 10* smoothedavg*30);
+        cloud(-800, -644, 10, 10* smoothedavg*30);
+        cloud(-1000, -644, 10, 10* smoothedavg*30);
+        cloud(-100, -544, 10, 10* smoothedavg*30);
+        cloud(-300, -600, 10, 10* smoothedavg*30);
+        cloud(0, -644, 10, 10* smoothedavg*30);
 
-
-        //draws the flowers hopfully
-
-        //Flower 1
-
-        //centre
-        //makes the flower rotate without affecting the others in the background 
+        //potential sun
         anne.pushMatrix();
         anne.smooth();
         anne.noSmooth();
 
-        //rotates the flower
-        anne.frameRate(15);
-        frameCount++;
+        //rotates the sun 
+       // anne.frameRate(15);
+     //  frameCount++;
 
-        anne.translate(mouseX, mouseY);
+       // anne.translate(500, 500);
 
-       //hopfully rotates the flower
-       anne.rotate(radians(frameCount + flowerX));
+        //this hopefully rotates the sun
+   //     anne.rotate(radians(sunRotation));
+        anne.strokeWeight(2);
+        anne.fill(255);
+ 
+        anne.rotate(radians(sunRotation));
+        anne.ellipse(224, 184, 220, 220);
 
-       //draws the petals 
-       anne.fill(211, 169, 130);
-       for(int i = 0; i < 5; i++)
-       {
-            anne.ellipse(0, -40, 50, 50);
-            anne.rotate(radians(72));
-       }
-
-       //the center circle of the flower
-       anne.fill(246, 191, 170);
-       anne.ellipse(0,0,50,50);
+        anne.popMatrix();
 
 
-       anne.popMatrix();
-
-
-
-
-
-        // Start of Flower 2
-        //makes the flower rotate without affecting the others in the background 
-        anne.pushMatrix();
-        anne.smooth();
-        anne.noSmooth();
-
-        //rotates the flower
-        anne.frameRate(15);
-        frameCount++;
-
-       anne.translate(mouseX, mouseY);
-
-       //hopfully rotates the flower
-       anne.rotate(radians(frameCount + flowerX));
-       anne.translate(-200,0);
-
-       //draws the petals 
-       anne.fill(255, 0, 0);
-       for(int i = 0; i < 5; i++)
-       {
-            anne.ellipse(0, -40, 50, 50);
-        //    anne.ellipse(0, -50, 60, 60);
-            anne.rotate(radians(75));
-       }
-
-       //the center circle of the flower
-       anne.fill(246, 191, 170);
-       anne.ellipse(0,0,50,50);
-
-
-       //End of the popMatrix flower 2
-       anne.popMatrix();
-
-
-
-
-
-        // Start of Flower 3
-        //makes the flower rotate without affecting the others in the background 
-        anne.pushMatrix();
-        anne.smooth();
-        anne.noSmooth();
-
-        //rotates the flower
-        anne.frameRate(15);
-        frameCount++;
-
-       anne.translate(mouseX, mouseY);
-
-       //hopfully rotates the flower
-       anne.rotate(radians(frameCount + flowerX));
-       anne.translate(-400,0);
-
-       //draws the petals 
-       anne.fill(255, 0, 0);
-       for(int i = 0; i < 5; i++)
-       {
-            anne.ellipse(0, -40, 50, 50);
-        //    anne.ellipse(0, -50, 60, 60);
-            anne.rotate(radians(75));
-       }
-
-       //the center circle of the flower
-       anne.fill(246, 191, 170);
-       anne.ellipse(0,0,50,50);
-
-
-       //End of the popMatrix flower 2
-       anne.popMatrix();
-
-
-
-
-       
-        // Start of Flower 3
-        //makes the flower rotate without affecting the others in the background 
-        anne.pushMatrix();
-        anne.smooth();
-        anne.noSmooth();
-
-        //rotates the flower
-        anne.frameRate(15);
-        frameCount++;
-
-       anne.translate(mouseX, mouseY);
-
-       //hopfully rotates the flower
-       anne.rotate(radians(frameCount + flowerX));
-       anne.translate(-600,0);
-
-       //draws the petals 
-       anne.fill(255, 0, 0);
-       for(int i = 0; i < 5; i++)
-       {
-            anne.ellipse(0, -40, 50, 50);
-        //    anne.ellipse(0, -50, 60, 60);
-            anne.rotate(radians(75));
-       }
-
-       //the center circle of the flower
-       anne.fill(246, 191, 170);
-       anne.ellipse(0,0,50,50);
-
-
-       //End of the popMatrix flower 3
-       anne.popMatrix();
-
-
-
-
-       
-        // Start of Flower 4
-        //makes the flower rotate without affecting the others in the background 
-        anne.pushMatrix();
-        anne.smooth();
-        anne.noSmooth();
-
-        //rotates the flower
-        anne.frameRate(15);
-        frameCount++;
-
-       anne.translate(mouseX, mouseY);
-
-       //hopfully rotates the flower
-       anne.rotate(radians(frameCount + flowerX));
-       anne.translate(-800,0);
-
-       //draws the petals 
-       anne.fill(255, 0, 0);
-       for(int i = 0; i < 5; i++)
-       {
-            anne.ellipse(0, -40, 50, 50);
-        //    anne.ellipse(0, -50, 60, 60);
-            anne.rotate(radians(75));
-       }
-
-       //the center circle of the flower
-       anne.fill(246, 191, 170);
-       anne.ellipse(0,0,50,50);
-
-
-       //End of the popMatrix flower 4
-       anne.popMatrix();
-
-
+        sunRotation += 0.20;
     }//End of  render 
 
 

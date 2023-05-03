@@ -19,7 +19,7 @@ public class paris extends Visual{
 
     public void setup()
     {
-        paris.size(5000, 5000);
+        paris.size(5000, 5000);yy
     }
     
     
