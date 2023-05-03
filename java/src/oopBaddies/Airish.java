@@ -1,13 +1,14 @@
 package oopBaddies;
 import ie.tudublin.Visual;
 //import processing.core.PVector;
-//import processing.core.PVector;
 
 //main class
 public class Airish extends Visual {
 
     Start airish;
 
+    //ferriswheel
+    float z = 0;
 
     //constructor
 
@@ -16,107 +17,131 @@ public class Airish extends Visual {
         this.airish = airish;
     }
 
-    //declaring variables 
-    int i=1;
-    int j=1;
-    int n=300;
-    int a=1;
-    float theta;
-
-    public void setup()
+    public void mount(int a, int b, int c, float d)
     {
-        size(640, 360);
+            //bird left side of sky
+            airish.stroke(0);
+            airish.line(200,80,160,100);       
+            airish.line(160,80,160,100);
+
+            //bird upper right in sky
+            airish.translate(450,-7);
+            airish.line(200,80,160,100);
+            airish.line(160,80,160,100);
+
+            //mountains
+            airish.triangle(45,400,500,400,250,50);
+            airish.triangle(100,400,500,400,400,20);
+            
     }
 
-    public void draw()
+    public void ferriswheel(int a, int b, int c, int d)
     {
-        airish.frameRate(30);
-        airish.stroke(255);
 
-        float a = (mouseX / (float) width) * 90f;
-        theta = radians(a);
-        airish.translate(width/2, height);
-        airish.line(0,0,0,-120);
-        airish.translate(0,-120);
-        branch(120);
+        //main wheel of ferriswheel
+        airish.ellipse(0, 0, 200, 200);
 
-    }
+        //frame
+        airish.triangle(0,0,75,130,-75,130);
 
-    void branch(float h)
-    {
-        h *= 0.66;
+        //Spokes in wheel
+       // rotate(z);
+        for(int i = 0; i < 18; i++)
+        {
+            airish.rotateZ(PI/9);
+            airish.line(0,0,0,100);
+        }
 
-        if(h > 2)
+        //carriages from ferris wheel
+        for(int j = 0; j<6; j++)
         {
             airish.pushMatrix();
-            airish.rotate(theta);
-            airish.line(0, 0, 0, -h);
-            airish.translate(0, -h);
-            branch(h);
-            airish.popMatrix();
+            airish.rotate(PI/3);
+            airish.translate(0,100,0);
+            airish.rotate(-z);
+            
+            airish.rotateZ(radians(-60*j));
+            airish.rotateZ(radians(-60));
+            airish.fill(10,150,255);
+            airish.triangle(0,0,5,10,-5,10);
+            airish.fill(255,150,10);
 
-            airish.pushMatrix();
-            airish.rotate(-theta);
-            airish.line(0,0,0, -h);
-            airish.translate(0, -h);
-            branch(h);
             airish.popMatrix();
+            airish.rotate(z);
+            airish.translate(0, -100, 0);
 
-        }//end if
+            //airish.popMatrix();
+        }
+
+        z = z-(PI/700);
+        println("X: " + mouseX + " Y: " + mouseY);
+
     }
 
-    
 
     void render()
     {
-
-        //calulating average
-        float avg = 0;
-        for (int i = 0; i < ab.size(); i++)
         {
-            avg += abs(ab.get(i));
+            //calulating average
+            float avg = 0;
+            for (int i = 0; i < ab.size(); i++)
+            {
+                avg += abs(ab.get(i));
+            }
+            avg = avg / ab.size();
+            float smoothedavg = 0;
+            smoothedavg = lerp(smoothedavg, avg, 0.1f);
+    
+            airish.colorMode(RGB);
         }
-        avg = avg / ab.size();
-        float smoothedavg = 0;
-        smoothedavg = lerp(smoothedavg, avg, 0.1f);
 
-        //make colours to music
-        float c = map(avg, -1, 1, 0, 255);
 
-        airish.background(0);//black background
+         //mountains
+         mount(45,400,500,400);
+         //ferriswheel
+         ferriswheel(0,0,200,200);
+       //  mount(-100,400,500,400 );
 
-        //call branch function
-        branch(120);
+        //borderline colour of mountains
+        airish.stroke(211);
+        //inside colour of mountains
+        airish.fill(255);
+
+
+        //bird left side of sky
+        airish.line(200,80,160,100);
+        airish.line(160,80,160,100);
         
+        //sun in sky
+        airish.translate(40,80);
+        airish.fill(245, 187, 87);
+        airish.stroke(245, 187, 87);
 
-       //draw butterfly
-       airish.stroke (255) ;
-       airish.strokeWeight(2);
+
+        airish.pushMatrix();
+        airish.translate(500,40);
+        airish.rotate(radians(frameCount / 2));
+        airish.ellipse(0, 0, 60, 60);
+        airish.line(0, -60, 0, -40);
+        airish.line(0, 40, 0, 60);
+        airish.line(-45, -45, -30, -30);
+        airish.line(45, -45, 30, -30);
+        airish.line(-60, 0, -40, 0);
+        airish.line(40, 0, 60, 0);
+        airish.line(-45, 45, -30, 30);
+        airish.line(45, 45, 30, 30);
+
+        
+        airish.popMatrix();
+        airish.noFill();
+        
+        //bird upper right in sky
+        airish.translate(450,-7);
+        airish.line(200,80,160,100);
+        airish.line(160,80,160,100);
+        
     
-       airish.stroke (255) ;
-       airish.strokeWeight(3);
-       airish.fill(c, 255, 255);
-       airish.quad (airish.mouseX-60, airish.mouseY-70, airish.mouseX-10, airish.mouseY-50,airish.mouseX,airish.mouseY,airish.mouseX-40,airish.mouseY-10);
-       airish.quad (airish.mouseX+60, airish.mouseY-70, airish.mouseX+10, airish.mouseY-50, airish.mouseX, airish.mouseY, airish.mouseX+40, airish.mouseY-10);
-       airish.fill (c, 255, 255);
-       airish.quad (airish.mouseX-60, airish.mouseY+40, airish.mouseX-40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX-18, airish.mouseY+30);
-       airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10,airish.mouseY+30);
-        
+    }
+
     
-        //moving the background 
-        n-=0.1f;
-        if(n==-0.5f)
-        {
-            n = 1;
-
-        }//end if
-        
-        //
-        a++;
-
-        
-    }//end render()
-    
-
 }//end main class
-    
