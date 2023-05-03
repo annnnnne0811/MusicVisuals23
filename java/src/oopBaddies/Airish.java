@@ -30,15 +30,15 @@ public class Airish extends Visual {
 
     public void draw()
     {
-        frameRate(30);
-        stroke(255);
+        airish.frameRate(30);
+        airish.stroke(255);
 
         float a = (mouseX / (float) width) * 90f;
         theta = radians(a);
-        translate(width/2, height);
-        line(0,0,0,-120);
-        translate(0,-120);
-        branch(120);
+        airish.translate(width/2, height);
+        airish.line(0,0,0,-120);
+        airish.translate(0,-120);
+        airish.branch(120);
 
     }
 
@@ -48,19 +48,19 @@ public class Airish extends Visual {
 
         if(h > 2)
         {
-            pushMatrix();
-            rotate(theta);
-            line(0, 0, 0, -h);
-            translate(0, -h);
+            airish.pushMatrix();
+            airish.rotate(theta);
+            airish.line(0, 0, 0, -h);
+            airish.translate(0, -h);
             branch(h);
-            popMatrix();
+            airish.popMatrix();
 
-            pushMatrix();
-            rotate(-theta);
-            line(0,0,0, -h);
-            translate(0, -h);
+            airish.pushMatrix();
+            airish.rotate(-theta);
+            airish.line(0,0,0, -h);
+            airish.translate(0, -h);
             branch(h);
-            popMatrix();
+            airish.popMatrix();
 
         }//end if
     }
