@@ -7,8 +7,6 @@ public class Airish extends Visual {
 
     Start airish;
 
-    //ferriswheel
-    float z = 0;
 
     //constructor
 
@@ -16,6 +14,14 @@ public class Airish extends Visual {
     {
         this.airish = airish;
     }
+
+    //declaring variables 
+    int i=1;
+    int j=1;
+    int n=300;
+    int a=1;
+    float z = 0;
+
 
     public void mount(int a, int b, int c, float d)
     {
@@ -36,29 +42,32 @@ public class Airish extends Visual {
     }
 
 
+    
 
 
     void render()
     {
+        //calulating average
+        float avg = 0;
+        for (int i = 0; i < ab.size(); i++)
         {
-            //calulating average
-            float avg = 0;
-            for (int i = 0; i < ab.size(); i++)
-            {
-                avg += abs(ab.get(i));
-            }
-            avg = avg / ab.size();
-            float smoothedavg = 0;
-            smoothedavg = lerp(smoothedavg, avg, 0.1f);
-    
-            airish.colorMode(RGB);
+            avg += abs(ab.get(i));
         }
+        avg = avg / ab.size();
+        float smoothedavg = 0;
+        smoothedavg = lerp(smoothedavg, avg, 0.1f);
+    
+        airish.colorMode(RGB);
 
+        float c = map(avg, -1, 1, 0, 255);
 
 
 
          //mountains
          mount(45,400,500,400);
+        //mountains
+        mount(45,400,500,400);
+        //mount(-100,400,500,400 );
 
 
 
@@ -76,6 +85,9 @@ public class Airish extends Visual {
 
 
   
+        airish.translate(40,80);
+        airish.fill(245, 187, 87);
+        airish.stroke(245, 187, 87); 
         airish.translate(500,40);
         airish.rotate(radians(frameCount / 2));
         airish.ellipse(0, 0, 60, 60);
@@ -87,8 +99,6 @@ public class Airish extends Visual {
         airish.line(40, 0, 60, 0);
         airish.line(-45, 45, -30, 30);
         airish.line(45, 45, 30, 30);
-
-        
         airish.popMatrix();
         airish.noFill();
         
@@ -165,6 +175,19 @@ public class Airish extends Visual {
 
 
 
+        //draw butterfly
+        airish.stroke (255) ;
+        airish.strokeWeight(2);
+    
+        airish.stroke (255) ;
+        airish.strokeWeight(3);
+        airish.fill(c, 255, 255);
+        airish.quad (airish.mouseX-60, airish.mouseY-70, airish.mouseX-10, airish.mouseY-50,airish.mouseX,airish.mouseY,airish.mouseX-40,airish.mouseY-10);
+        airish.quad (airish.mouseX+60, airish.mouseY-70, airish.mouseX+10, airish.mouseY-50, airish.mouseX, airish.mouseY, airish.mouseX+40, airish.mouseY-10);
+        airish.fill (c, 255, 255);
+        airish.quad (airish.mouseX-60, airish.mouseY+40, airish.mouseX-40, airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX-18, airish.mouseY+30);
+        airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40, airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10, airish.mouseY+30);
+        
         
     
     }
