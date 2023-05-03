@@ -46,7 +46,7 @@ public class Anne extends Visual
     //rect(x-co, y-co, width, height)
     public void ground()
     {
-        anne.fill(170, 150, 146, 240);
+        anne.fill(194, 177, 168);
         anne.rect(0, 850, 2000, 500);
 
     }//End of funtion to draw ground
@@ -96,20 +96,20 @@ public class Anne extends Visual
         anne.rotate(radians(frameCount + flowerX));
 
         //draws the flower petals
-        anne.fill(211, 169, 130);
+        anne.fill(246, 204, 213);
         for(int i = 0; i < 5; i++)
         {
+            //ellipse(x-co, y-co, width, height)
             anne.ellipse(0 , -40, 50, 50);
             anne.rotate(radians(72));
         }
 
         //the center of the flower
-        anne.fill(246, 191, 170);
+        anne.fill(173, 174, 179);
         anne.ellipse(0,0,50,50);
 
         //end of the pushMatrix
         anne.popMatrix();
-
 
     } //End of the funtion to draw the flower 
 
