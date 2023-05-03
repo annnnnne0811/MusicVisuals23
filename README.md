@@ -25,6 +25,7 @@ To achieve this goal, we made a menu that gives the user 4 options 1. Anne, 2.Ai
 
 # Instructions
 The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose which type design that they would like to see.
+
 Press 1 - Anne which shows 
 
 Press 2 - Airish which shows
@@ -34,6 +35,14 @@ Press 3 - Mena which shows a house with street lights that has grass and a pond 
 Press 4 - Paris which shows 
 
 # How it works
+To run this project you wil need Visual Studio Code, and make sure to have the relevant Java Libraries and Processing Labraries installed for it to run
+properly. To start this project you will need to press the FN-F5 and then the program will run which will show you main screen with a list of options
+or visualisers for you to watch and it will start playing the song
+
+We made a folder called 'oopBaddies' inside the src folder. Inside the folder, we all made java files for each visualiser. After that we made a
+filed called 'Start.java' which has a switch statament 
+
+
 
 # What I am most proud of in the assignment
 
