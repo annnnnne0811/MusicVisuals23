@@ -1,12 +1,16 @@
 package oopBaddies;
 import ie.tudublin.Visual;
 //import processing.core.PVector;
-import processing.core.PVector;
+//import processing.core.PVector;
 
 //main class
 public class Airish extends Visual {
 
     Start airish;
+
+    float theta;
+    float h = 0;
+
 
 
     //constructor
@@ -41,26 +45,25 @@ public class Airish extends Visual {
         branch(120);
 
     }
-
-    void branch(float h)
+    public void branch()
     {
         h *= 0.66;
 
         if(h > 2)
         {
-            pushMatrix();
-            rotate(theta);
-            line(0, 0, 0, -h);
-            translate(0, -h);
-            branch(h);
-            popMatrix();
+            airish.pushMatrix();
+            airish.rotate(theta);
+            airish.line(0, 0, 0, -h);
+            airish.translate(0, -h);
+            airish.branch(h);
+            airish.popMatrix();
 
-            pushMatrix();
-            rotate(-theta);
-            line(0,0,0, -h);
-            translate(0, -h);
-            branch(h);
-            popMatrix();
+            airish.pushMatrix();
+            airish.rotate(-theta);
+            airish.line(0,0,0, -h);
+            airish.translate(0, -h);
+            airish.branch(h);
+            airish.popMatrix();
 
         }//end if
     }
@@ -86,7 +89,8 @@ public class Airish extends Visual {
         airish.background(0);//black background
 
         //call branch function
-        branch(c);
+
+
         
 
        //draw butterfly
