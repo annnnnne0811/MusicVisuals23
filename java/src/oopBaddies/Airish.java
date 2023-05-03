@@ -1,6 +1,7 @@
 package oopBaddies;
 import ie.tudublin.Visual;
 //import processing.core.PVector;
+import processing.core.PVector;
 
 //main class
 public class Airish extends Visual {
@@ -20,6 +21,51 @@ public class Airish extends Visual {
     int j=1;
     int n=300;
     int a=1;
+    float theta;
+
+    public void setup()
+    {
+        size(640, 360);
+    }
+
+    public void draw()
+    {
+        frameRate(30);
+        stroke(255);
+
+        float a = (mouseX / (float) width) * 90f;
+        theta = radians(a);
+        translate(width/2, height);
+        line(0,0,0,-120);
+        translate(0,-120);
+        branch(120);
+
+    }
+
+    void branch(float h)
+    {
+        h *= 0.66;
+
+        if(h > 2)
+        {
+            pushMatrix();
+            rotate(theta);
+            line(0, 0, 0, -h);
+            translate(0, -h);
+            branch(h);
+            popMatrix();
+
+            pushMatrix();
+            rotate(-theta);
+            line(0,0,0, -h);
+            translate(0, -h);
+            branch(h);
+            popMatrix();
+
+        }//end if
+    }
+
+    
 
     void render()
     {
@@ -38,127 +84,9 @@ public class Airish extends Visual {
         float c = map(avg, -1, 1, 0, 255);
 
         airish.background(0);//black background
-        airish.noStroke();
-        //fill the middle circles in white
-        airish.fill(255,255,255);
-        //if a is 1 meaning this will only appear if user presses key that allows to display this drwaing
-        if(a==1)
-        {
-            //we put the centre circle at the start as the petals of flower will overlap it
-            //draws the centre white circle of flower
-            airish.fill(255,255,255);
-            airish.ellipse(250,250,100,100);
 
-            
-            airish.fill(253, 47, 96);
-            airish.ellipse(175,175,50,50);
-            airish.triangle(175,200,250,250,200,175);
-
-            airish.ellipse(250,150,50,50);
-            airish.triangle(255,150,250,250,275,150);
-
-            airish.ellipse(325,175,50,50);
-            airish.triangle(300,175,250,250,325,200);
-
-            airish.ellipse(150,250,50,50);
-            airish.triangle(150,255,250,250,150,275);
-
-            airish.ellipse (350,250,50,50);
-            airish.triangle(350,225,250,250,350,275);
-
-            airish.ellipse(175,325,50,50);
-            airish.triangle(175,300,250,250,200,325);
-
-            airish.ellipse(250,350,50,50);
-            airish.triangle(225,350,250,250,275,350);
-
-            airish.ellipse(325,325,50,50);
-            airish.triangle(300,325,250,250,325,300);
-
-        }//end if
-
-        if(a>=3)
-        {
-            for (int i= -250;i<1400; i+=250)
-            {
-                for (j=-250;j<700;j+=250)
-                {
-                    airish.fill(255);
-                    airish.ellipse(250+i,250+j,100,100); 
-                    airish.fill (c, 100 ,100);
-                    airish.ellipse(175+i,175+j,50,50);
-                    airish.triangle(175+i,200+j,250+i,250+j,200+i,175+j);
-                    airish.ellipse(250+i,150+j,50,50);
-                    airish.triangle(225+i,150+j,250+i,250+j,275+i,150+j);
-
-                    airish.ellipse(325+i,175+j,50,50);
-                    airish.triangle(300+i,175+j,250+i,250+j,325+i,200+j);
-
-                    airish.ellipse(150+i,250+j,50,50);
-                    airish.triangle(150+i,225+j,250+i,250+j,150+i,275+j);
-
-                    airish.ellipse(350+i,250+j,50,50);
-                    airish.triangle(350+i,225+j,250+i,250+j,350+i,275+j);
-
-                    airish.ellipse(175+i,325+j,50,50);
-                    airish.triangle(175+i,300+j,250+i,250+j,200+i,325+j);
-
-                    airish.ellipse(250+i,350+j,50,50);
-                    airish.triangle(225+i,350+j,250+i,250+j,275+i,350+j);
-
-                    airish.ellipse(325+i,325+j,50,50);
-                    airish.triangle(300+i,325+j,250+i,250+j,325+i,300+j);
-
-                    airish.fill(0);
-                    airish.ellipse(250+i,250+j,n,n);
-
-                }//end for
-
-            }//end for
-
-        }//end if
-
-        if(a>=2)
-        {
-            for (i=-125;i<1400;i+=250)
-            {
-                for (j=-125;j<700;j+=250)
-                {
-                    airish.fill (255);
-                    airish.ellipse (250+i,250+j,100,100); 
-                    airish.fill(200, 255, 255);
-
-                    airish.ellipse(175+i,175+j,50,50);
-                    airish.triangle(175+i,200+j,250+i,250+j,200+i,175+j);
-
-                    airish.ellipse(250+i,150+j,50,50);
-                    airish.triangle(225+i,150+j,250+i,250+j,275+i,150+j);
-
-                    airish.ellipse(325+i,175+j,50,50);
-                    airish.triangle(300+i,175+j,250+i,250+j,325+i,200+j);
-
-                    airish.ellipse(150+i,250+j,50,50);
-                    airish.triangle(150+i,225+j,250+1,250+j,150+1,275+j);
-
-                    airish.ellipse(350+i,250+j,50,50);
-                    airish.triangle(350+i,225+j,250+i,250+j,350+i,275+j);
-
-                    airish.ellipse(175+i,325+j,50,50);
-                    airish.triangle(175+i,300+j,250+i,250+j,200+i,325+j);
-
-                    airish.ellipse(250+i,350+j,50,50);
-                    airish.triangle(225+i,350+j,250+i,250+j,275+i,350+j);
-
-                    airish.ellipse(325+i,325+j,50,50);
-                    airish.triangle(300+i,325+j,250+i,250+j,325+i,300+j);
-
-                }//end for
-
-            }//end for
-
-        }//end if
-
-
+        //call branch function
+        branch(c);
         
 
        //draw butterfly
@@ -175,8 +103,6 @@ public class Airish extends Visual {
        airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10,airish.mouseY+30);
         
     
-
-        
         //moving the background 
         n-=0.1f;
         if(n==-0.5f)
@@ -187,6 +113,8 @@ public class Airish extends Visual {
         
         //
         a++;
+
+        
     }//end render()
     
 
