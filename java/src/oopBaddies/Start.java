@@ -40,6 +40,7 @@ public class Start extends Visual{
         if(key == '4')
         {
             mode = 4;
+        
         }
     }
 
@@ -109,7 +110,7 @@ public class Start extends Visual{
 
             //Paris 
             case 4:
-            background(color(255, 192, 203, 200));
+            background(10,20,50);
             paris.render();
             break;
             
