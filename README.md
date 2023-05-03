@@ -23,16 +23,12 @@ To achieve this goal, we made a menu that gives the user 4 options 1. Anne, 2.Ai
 
 
 
-
-
-
-
-
-
-
-
 # Instructions
-The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose.
+The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose which type design that they would like to see.
+Press 1 - Anne which shows 
+Press 2 - Airish which shows
+Press 3 - Mena which shows a house with street lights that has grass and a pond with rocks around it, with a rocket moving up to the moon
+Press 4 - Paris which shows 
 # How it works
 
 # What I am most proud of in the assignment
