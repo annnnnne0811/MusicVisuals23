@@ -24,6 +24,32 @@ public class Airish extends Visual {
     float theta;
     float h;
 
+    public void branch(float h)
+    {
+        h *= 0.66;
+
+
+        if(h > 2)
+        {
+            airish.pushMatrix();
+            airish.rotate(theta);
+            airish.line(0, 0, 0, -h);
+            airish.translate(0, -h);
+            //branch(h);
+            airish.popMatrix();
+
+            airish.pushMatrix();
+            airish.rotate(-theta);
+            airish.line(0,0,0, -h);
+            airish.translate(0, -h);
+            //branch(h);
+            airish.popMatrix();
+
+        }//end if
+
+
+    }
+
     
     void render()
     {
@@ -48,17 +74,17 @@ public class Airish extends Visual {
         
 
        //draw butterfly
-     //  airish.stroke (255) ;
-     //  airish.strokeWeight(2);
+       airish.stroke (255) ;
+       airish.strokeWeight(2);
     
-     //  airish.stroke (255) ;
-    //   airish.strokeWeight(3);
-    //   airish.fill(c, 255, 255);
-    //   airish.quad (airish.mouseX-60, airish.mouseY-70, airish.mouseX-10, airish.mouseY-50,airish.mouseX,airish.mouseY,airish.mouseX-40,airish.mouseY-10);
-   //    airish.quad (airish.mouseX+60, airish.mouseY-70, airish.mouseX+10, airish.mouseY-50, airish.mouseX, airish.mouseY, airish.mouseX+40, airish.mouseY-10);
-    //   airish.fill (c, 255, 255);
-   //    airish.quad (airish.mouseX-60, airish.mouseY+40, airish.mouseX-40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX-18, airish.mouseY+30);
-//       airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10,airish.mouseY+30);
+       airish.stroke (255) ;
+       airish.strokeWeight(3);
+       airish.fill(c, 255, 255);
+       airish.quad (airish.mouseX-60, airish.mouseY-70, airish.mouseX-10, airish.mouseY-50,airish.mouseX,airish.mouseY,airish.mouseX-40,airish.mouseY-10);
+       airish.quad (airish.mouseX+60, airish.mouseY-70, airish.mouseX+10, airish.mouseY-50, airish.mouseX, airish.mouseY, airish.mouseX+40, airish.mouseY-10);
+       airish.fill (c, 255, 255);
+       airish.quad (airish.mouseX-60, airish.mouseY+40, airish.mouseX-40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX-18, airish.mouseY+30);
+       airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10,airish.mouseY+30);
         
     
         //moving the background 
@@ -72,8 +98,7 @@ public class Airish extends Visual {
         //
         a++;
 
-
-        
+        airish.frameRate(30);
         airish.stroke(255);
 
         float a = (mouseX / (float) width) * 90f;
@@ -81,33 +106,12 @@ public class Airish extends Visual {
         airish.translate(airish.width/2, airish.height);
         airish.line(0,0,0,-120);
         airish.translate(0,-120);
-        //branch(120);
+        branch(120);
 
 
         //call branch function
         //branch(120);
-
-
-        h *= 0.66;
-
-        if(h > 2)
-        {
-            airish.pushMatrix();
-            airish.rotate(theta);
-            airish.line(0, 0, 0, -h);
-            airish.translate(0, -h);
-            //branch(h);
-            airish.popMatrix();
-
-            airish.pushMatrix();
-            airish.rotate(-theta);
-            airish.line(0,0,0, -h);
-            airish.translate(0, -h);
-            //branch(h);
-            airish.popMatrix();
-
-        }//end if
-
+    
         
     }//end render()
     
