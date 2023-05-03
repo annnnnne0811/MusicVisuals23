@@ -27,12 +27,6 @@ public class Airish extends Visual {
     float theta;
     float h;
 
-    public void setup()
-    {
-        airish.size(640, 360);
-        airish.frameRate(30);
-
-    }
 
     public void branch(float h)
     {
@@ -108,7 +102,9 @@ public class Airish extends Visual {
         //
         d++;
 
-        setup();
+        airish.size(640, 360);
+        airish.frameRate(30);
+
     
         airish.stroke(255);
 
