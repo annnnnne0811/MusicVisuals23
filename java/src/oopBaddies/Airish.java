@@ -1,5 +1,8 @@
+
 package oopBaddies;
+
 import ie.tudublin.Visual;
+
 //import processing.core.PVector;
 //import processing.core.PVector;
 
@@ -20,9 +23,16 @@ public class Airish extends Visual {
     int i=1;
     int j=1;
     int n=300;
-    int a=1;
+    int d=1;
     float theta;
     float h;
+
+    public void setup()
+    {
+        airish.size(640, 360);
+        airish.frameRate(30);
+
+    }
 
     public void branch(float h)
     {
@@ -50,6 +60,7 @@ public class Airish extends Visual {
 
     }
 
+
     
     void render()
     {
@@ -69,7 +80,6 @@ public class Airish extends Visual {
 
         airish.background(0);//black background
 
-        //airish.size(640, 360);
         //airish.frameRate(30);
         
 
@@ -96,9 +106,10 @@ public class Airish extends Visual {
         }//end if
         
         //
-        a++;
+        d++;
 
-        airish.frameRate(30);
+        setup();
+    
         airish.stroke(255);
 
         float a = (mouseX / (float) width) * 90f;
