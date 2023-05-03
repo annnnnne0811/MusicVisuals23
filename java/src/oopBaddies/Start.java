@@ -2,6 +2,7 @@ package oopBaddies;
 
 //Add imports here!!!
 import ie.tudublin.Visual;
+import processing.core.PVector;
 
 
 public class Start extends Visual{
@@ -96,7 +97,7 @@ public class Start extends Visual{
 
             //Airish
             case 2:
-            background(175, 213, 240);
+            background(0);
             airish.render();
             break;
 
