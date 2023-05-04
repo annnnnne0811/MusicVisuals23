@@ -48,7 +48,13 @@ filed called 'Start.java' which has a switch statement allowing to access each j
 import oopBaddies.*;
 
 ```
+Visual.java has a subclass called Start.java. This states that we can use the minim libraries that is called in Visual.java. This allows us to play our song.
 
+```Java
+import ddf.minim.*;
+import ddf.minim.analysis.FFT;
+
+```
 
 # What I am most proud of in the assignment
 
