@@ -2,17 +2,18 @@
 
 Name:			Student Number:  
 
-Mary Anne Flores|| C20461582
+Mary Anne Flores || C20461582
 
-Mena Nguyen		|| C20418324
+Mena Nguyen		 || C20418324
 
-Airish Reyes	|| C20477044
+Airish Reyes	 || C20477044
 
-Paris Le		|| C20401536
+Paris Le		 || C20401536
 
 
 
 # Description of the assignment
+
 The theme we concluded for this assigment was "what we feel when we listen to the song" 
 
 
@@ -22,29 +23,39 @@ The song we choose to do for this assignment is a japanese song called "Shinunog
 To achieve this goal, we made a menu that gives the user 4 options 1. Anne, 2.Airish, 3.Mena, 4.Paris , by pressing one of the options it will bring you to one of the programmers thoughts about the song. 
 
 
-
 # Instructions
+
 The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose which type design that they would like to see.
 
-Press 1 - Anne which shows 
+Press 1 - Anne, which shows 
 
-Press 2 - Airish which shows
+Press 2 - Airish, which shows
 
-Press 3 - Mena which shows a house with street lights that has grass and a pond with rocks around it, with a rocket moving up to the moon
+Press 3 - Mena, which shows a house with street lights that has grass and a pond with rocks around it, with a rocket moving up to the moon
 
-Press 4 - Paris which shows 
+Press 4 - Paris, which has a moving blue ocean wave and the moon in the middle that reacts to music, as well as two rainbow shifting color hearts on the side of the screen and a little plane that flies across the screen and loops around. A rainbow pixel-like static appears on the screen at random to reflect a retro aesthetic vibe. 
 
 # How it works
+
 To run this project you wil need Visual Studio Code, and make sure to have the relevant Java Libraries and Processing Labraries installed for it to run
 properly. To start this project you will need to press the FN-F5 and then the program will run which will show you main screen with a list of options
 or visualisers for you to watch and it will start playing the song
 
 We made a folder called 'oopBaddies' inside the src folder. Inside the folder, we all made java files for each visualiser. After that we made a
-filed called 'Start.java' which has a switch statament 
-
+filed called 'Start.java' which has a switch statement 
 
 
 # What I am most proud of in the assignment
+
+Airish - 
+
+Anne - 
+
+Mena -
+
+Paris - Although there were some stressful moments during the project, which caused me to have many breakdowns due to the code not working correctly and the screen size being off, our team was able to create some fantastic processing sketches that showcased our creativity and teamwork. Despite the challenges, I was eventually able to correct my code, the most challenging part of the code was resizing the blue wave, it was really difficult to modify the size at the begining and while it didn't turn out exactly as I had hoped, the resulting visuals were suprisingly great, and I'm quite satisfied with the outcome.
+
+Working with all the shapes, colors, and different functions was enjoyable and enlightening. I'm especially proud of the effort and dedication put forth by everyone on our team, which helped make our project outstanding and appealing. This assignment has taught me so many valuable lessons, and I feel grateful and proud to have been a part of such a great team. 
 
 # Markdown Tutorial
 
