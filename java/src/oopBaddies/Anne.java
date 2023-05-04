@@ -46,7 +46,8 @@ public class Anne extends Visual
     //rect(x-co, y-co, width, height)
     public void ground()
     {
-        anne.fill(194, 177, 168);
+        anne.stroke(114, 180, 58);
+        anne.fill(65, 101, 34);
         anne.rect(0, 850, 2000, 500);
 
     }//End of funtion to draw ground
@@ -89,15 +90,19 @@ public class Anne extends Visual
         anne.noSmooth();
 
         //rotates the flower
-        anne.frameRate(15);
+        anne.frameRate(1);
         frameCount++;
 
         anne.translate(anne.width/2, anne.height/2);
+        anne.translate(-100,100);
 
         //makes the flower rotate maybe this time???
         anne.rotate(radians(frameCount + flowerX));
 
+
+
         //draws the flower petals
+        anne.stroke(246, 204, 213);
         anne.fill(246, 204, 213);
         for(int i = 0; i < 5; i++)
         {
@@ -107,15 +112,29 @@ public class Anne extends Visual
         }
 
         //the center of the flower
+       // anne.stroke(173, 174, 179);
         anne.fill(173, 174, 179);
         anne.ellipse(0,0,50,50);
 
+        //stem
+        //so the line doesnt rotate with the flower 
+        anne.pushMatrix();
+        //anne.translate(0,0);
+        anne.rotate(-radians(frameCount + flowerX));
+    
+        anne.stroke(41, 63, 22);
+        anne.strokeWeight(3);
+        anne.line(0, 15, 0,255);
 
-        //end of the pushMatrix
+        //end of stem popMatrix()
         anne.popMatrix();
 
 
 
+
+
+        //end of the pushMatrix
+        anne.popMatrix();
 
 
         //flower 2
@@ -125,80 +144,7 @@ public class Anne extends Visual
         anne.noSmooth();
 
         //rotates the flower
-        anne.frameRate(30);
-        frameCount++;
-
-        anne.translate(anne.width/2, anne.height/2);
-        anne.translate(-200,100);
-
-        //makes the flower rotate maybe this time???
-        anne.rotate(radians(frameCount + flowerX));
-
-        //draws the flower petals
-        anne.fill(242, 137, 151);
-        for(int i = 0; i < 5; i++)
-        {
-            //ellipse(x-co, y-co, width, height)
-            anne.ellipse(0 , -40, 50, 50);
-            anne.rotate(radians(72));
-        }
-
-        //the center of the flower
-        anne.fill(173, 174, 179);
-        anne.ellipse(0,0,50,50);
-
-
-        //end of the pushMatrix
-        anne.popMatrix();
-
-
-
-
-        //flower 3
-        //makes the flower rotate without affecting the background
-        anne.pushMatrix();
-        anne.smooth();
-        anne.noSmooth();
-
-        //rotates the flower
-        anne.frameRate(25);
-        frameCount++;
-
-        anne.translate(anne.width/2, anne.height/2);
-        anne.translate(200,200);
-
-        //makes the flower rotate maybe this time???
-        anne.rotate(radians(frameCount + flowerX));
-
-        //draws the flower petals
-        anne.fill(242, 137, 151);
-        for(int i = 0; i < 5; i++)
-        {
-            //ellipse(x-co, y-co, width, height)
-            anne.ellipse(0 , -40, 50, 50);
-            anne.rotate(radians(72));
-        }
-
-        //the center of the flower
-        anne.fill(173, 174, 179);
-        anne.ellipse(0,0,50,50);
-
-
-        //end of the pushMatrix
-        anne.popMatrix();
-
-
-
-
-
-        //flower 4
-        //makes the flower rotate without affecting the background
-        anne.pushMatrix();
-        anne.smooth();
-        anne.noSmooth();
-
-        //rotates the flower
-        anne.frameRate(15);
+        anne.frameRate(5);
         frameCount++;
 
         anne.translate(anne.width/2, anne.height/2);
@@ -208,6 +154,7 @@ public class Anne extends Visual
         anne.rotate(radians(frameCount + flowerX));
 
         //draws the flower petals
+        anne.stroke(242, 137, 151);
         anne.fill(242, 137, 151);
         for(int i = 0; i < 5; i++)
         {
@@ -217,13 +164,28 @@ public class Anne extends Visual
         }
 
         //the center of the flower
+        anne.stroke(173, 174, 179);
         anne.fill(173, 174, 179);
         anne.ellipse(0,0,50,50);
 
 
-        //end of the pushMatrix
+        //stem
+        //so the line doesnt rotate with the flower 
+        anne.pushMatrix();
+        //anne.translate(0,0);
+        anne.rotate(-radians(frameCount + flowerX));
+    
+        anne.stroke(41, 63, 22);
+        anne.strokeWeight(3);
+        anne.line(0, 15, 0,255);
+
+        //end of stem popMatrix()
         anne.popMatrix();
 
+    
+
+        //end of the pushMatrix
+        anne.popMatrix();
 
 
 
@@ -272,7 +234,7 @@ public class Anne extends Visual
         anne.noStroke();
 
         //making the circle bigger representing the height anf width
-        if( anne.frameCount % 70 ==  00)
+        if( anne.frameCount % 30 ==  00)
         {
             anne.ellipse((anne.width),(anne.height), smoothedavg, smoothedavg);
         }
@@ -280,19 +242,16 @@ public class Anne extends Visual
         anne.translate(anne.width/2, anne.height/2,0);
 
         //renders the clouds 
-        cloud(-600, -544, 10, 10* smoothedavg*30);
-        cloud(-800, -644, 10, 10* smoothedavg*30);
-        cloud(-1000, -644, 10, 10* smoothedavg*30);
-        cloud(-100, -544, 10, 10* smoothedavg*30);
-        cloud(-300, -600, 10, 10* smoothedavg*30);
-        cloud(0, -644, 10, 10* smoothedavg*30);
+        cloud(-600, -544, 10, 20* smoothedavg*200);
+        cloud(-800, -644, 10, 20* smoothedavg*200);
+        cloud(-1000, -644, 10, 20* smoothedavg*200);
+        cloud(-100, -544, 10, 20* smoothedavg*200);
+        cloud(-300, -600, 10, 20* smoothedavg*200);
+        cloud(0, -644, 10, 20* smoothedavg*200);
 
 
 
 
-
-
-    
 
 
 

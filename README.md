@@ -27,7 +27,7 @@ To achieve this goal, we made a menu that gives the user 4 options 1. Anne, 2.Ai
 
 The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose which type design that they would like to see.
 
-Press 1 - Anne, which shows 
+Press 1 - Anne, which shows the clouds going along with the music and the flowers that rotate 
 
 Press 2 - Airish, which shows
 
