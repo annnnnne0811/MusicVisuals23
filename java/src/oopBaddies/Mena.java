@@ -2,6 +2,7 @@ package oopBaddies;
 
 import ie.tudublin.Visual;
 
+// start of the main
 public class Mena extends Visual {
 
     Start mena;
@@ -78,14 +79,14 @@ public class Mena extends Visual {
         mena.noStroke(); // remove the stroke
         mena.rect(0, 900, 2000 ,120);     
 
-         //draw a rocket
+         // draw a rocket
          mena.translate(CENTER, CENTER);
          mena.fill(255);
          mena.triangle(950, y+100, 1000, y-10, 1050, y+100); // bottom of the rocket
         //an oval shape of the rocket and moving the rocket up
          mena.ellipse(w/2, y,100,200);
          mena.fill(175, 100, 220);
-        //two circle windows on the rocket and moving the rocket up
+        // two circle windows on the rocket and moving the rocket up
         // the two cicrle also represent the beat of the music
          mena.ellipse(w/2, y+10, 50+(smoothedavg*300), 50);
          mena.ellipse(w/2, y-50, 40+(smoothedavg*200),40);
@@ -114,7 +115,7 @@ public class Mena extends Visual {
         mena.line(345, 90, 375, 90);
 
         mena.fill(0, 204, 204); // set the color the blue
-        mena.noStroke();
+        mena.noStroke(); 
   
         // Draw the pond
         mena.ellipse(1000, 400, 450+ (smoothedavg*600), 200); // draw the pond of the water
@@ -129,7 +130,7 @@ public class Mena extends Visual {
         mena.rect(1500, 100, 20, 200); // draw the pole of the street light
         
         // drawing the head of the street light
-        mena.fill(255, 255, 204); // sett the color to yellow
+        mena.fill(255, 255, 204); // set the color to yellow
         mena.ellipse(1500, 80, 80+(smoothedavg*200), 80); // draw the head of the street light
         
         // Draw the lamp light
@@ -144,4 +145,4 @@ public class Mena extends Visual {
 
 
 
-}
+} //end main

@@ -96,11 +96,7 @@ public class Airish extends Visual {
         //}//end if
         
         //
-<<<<<<< HEAD
-        a++;
-=======
         //a++;
->>>>>>> ee1679003b2fc6d8f1c4b7adad06890a4ee37028
 
         airish.frameRate(30);
         airish.stroke(255);
