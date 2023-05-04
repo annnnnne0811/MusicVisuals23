@@ -56,6 +56,20 @@ import ddf.minim.analysis.FFT;
 
 ```
 
+We also created instance for each of the visualiser in our package, to be able to call the render methods that exist within.
+
+```Java
+public class Start extends Visual{
+    Anne anne = new Anne(this);
+    Airish airish = new Airish(this);
+    Mena mena = new Mena(this);
+    paris paris = new paris(this);
+}
+```
+
+
+
+
 # What I am most proud of in the assignment
 
 Airish - Despite the difficulties I encountered, what I am most proud of is being persevering. As I attempted other drawings like a recursive factoral tree and node growing tree etc. As well as that, getting most of the floral pattern for the background as it took a lot of trial and error to figure out the co-ordinates that will work. I found that it was also pleasing to see the butterfly and the background go with the music.
