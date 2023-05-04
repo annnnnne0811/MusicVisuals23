@@ -67,6 +67,77 @@ public class Start extends Visual{
 }
 ```
 
+Below you can see the example of the keyPressed method being used to handle the cases within the switch statement. The integer value stored in key will react to the same corresponding number in the switch statement.
+
+```Java
+public void keyPressed()
+    {
+        if(key == '0')
+        {
+            mode = 0;
+        }
+
+        if(key == '1')
+        {
+            mode = 1;
+        }
+
+        if(key == '2')
+        {
+            mode = 2;
+        }
+
+        if(key == '3')
+        {
+            mode = 3;
+        }
+
+        if(key == '4')
+        {
+            mode = 4;
+        
+        }
+    }
+
+```
+
+Then setup() method will play the song with the visualisers
+
+```Java
+public void setup()
+    {
+        startMinim();
+        loadAudio("fujisong.mp3");
+        getAudioPlayer().play();
+        
+        colorMode(HSB);
+    }
+
+```
+
+Then, in the switch statement  each visualiser render() method is called.
+
+```Java
+//Anne 
+case 1:
+ background(153, 204, 255);
+anne.render();
+break;
+
+
+//Airish
+case 2:
+background(0);
+airish.render();
+break;
+
+```
+
+
+
+
+
+
 
 
 
@@ -149,3 +220,7 @@ This is a table:
 |Some stuff | Some more stuff in this column |
 |Some stuff | Some more stuff in this column |
 |Some stuff | Some more stuff in this column |
+
+```Java
+
+```
