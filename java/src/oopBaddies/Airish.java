@@ -21,36 +21,64 @@ public class Airish extends Visual {
     int j=1;
     int n=300;
     int a=1;
-    float theta;
-    float h;
+    //float theta;
+    //float h;
+    //tree(part2)
+    float len = 100;
+    double angle = 0.3;
+    double reduction = 0.8;
 
-    public void branch(float h)
+    public void branches(double l, int depth)
     {
-        h *= 0.66;
-
-
-        if(h > 2)
+        if(l < 2 || depth > 10)
         {
-            airish.pushMatrix();
-            airish.rotate(theta);
-            airish.line(0, 0, 0, -h);
-            airish.translate(0, -h);
-            branch(h);
-            airish.popMatrix();
+            return;
+        }
+        airish.pushMatrix();
+          airish.rotate((float) angle*random(0.8,1.2));
+          airish.strokeWeight((float) (l * 0.2));
+          airish.line(0,0,(float) l,0);
+          airish.translate((float) l,0);
+          branches(l*reduction*random(0.8,1.2),depth + 1);
+        airish.popMatrix();
+        airish.pushMatrix();
+          airish.rotate((float)-angle*random(0.8,1.2));
+          airish.strokeWeight((float) (l * 0.2));
+          airish.line(0,0,(float) l,0);
+          airish.translate((float) l,0);
+          branches(l*reduction*random(0.8,1.2), depth + 1);
+        airish.popMatrix();
+          
 
-            airish.pushMatrix();
-            airish.rotate(-theta);
-            airish.line(0,0,0, -h);
-            airish.translate(0, -h);
-            branch(h);
-            airish.popMatrix();
+    }
 
-        }//end if
+    private float random(double d, double e) {
+        return 0;
+    }
+
+    public void trunk()
+    {
+        airish.strokeWeight((float)(len*0.2));
+        airish.stroke(0);
+        airish.line(0,0,len,0);
+        airish.pushMatrix();
+           airish.translate(len,0);
+           branches(len*reduction, 0);
+        airish.popMatrix();
+    }
+
+    public void display(float x, float y)
+    {
+        airish.pushMatrix();
+          airish.translate(x, y);
+          airish.rotate((float)(-0.5*PI));
+          trunk();
+        airish.popMatrix();
 
 
     }
 
-    
+ 
     void render()
     {
 
@@ -85,6 +113,19 @@ public class Airish extends Visual {
        airish.fill (c, 255, 255);
        airish.quad (airish.mouseX-60, airish.mouseY+40, airish.mouseX-40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX-18, airish.mouseY+30);
        airish.quad (airish.mouseX+60, airish.mouseY+40, airish.mouseX+40,airish.mouseY, airish.mouseX, airish.mouseY, airish.mouseX+10,airish.mouseY+30);
+
+        //branches
+        branches(angle, a);
+       
+        //trunk of tree
+        trunk();
+
+        //display
+        display(c, c);
+
+
+
+       
         
     
         //moving the background 
@@ -98,17 +139,9 @@ public class Airish extends Visual {
         //
         //a++;
 
-        airish.frameRate(30);
-        airish.stroke(255);
-
-        float a = (mouseX / (float) width) * 90f;
-        theta = radians(a);
-        //allows the tree trunk to start at the bottom of screen and centres it
-        airish.translate(airish.width/2, airish.height);
-        airish.line(0,0,0,-120);
-        airish.translate(0,-120);
+        //drawing tree
         //calls the branch() to keep drawing it again
-        branch(120);
+        //branch(120);
 
 
         //call branch function
