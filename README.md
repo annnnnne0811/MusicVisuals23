@@ -44,9 +44,10 @@ or visualisers for you to watch and it will start playing the song
 We made a folder called 'oopBaddies' inside the src folder. Inside the folder, we all made java files for each visualiser. After that we made a
 filed called 'Start.java' which has a switch statement allowing to access each java file that was needed depending on which key was pressed. Then, we called this file in Main.java to be able to excute the code. We did this by importing the oopBaddies folder.
 
-'''Java
+```Java
 import oopBaddies.*;
-'''
+
+```
 
 
 # What I am most proud of in the assignment
