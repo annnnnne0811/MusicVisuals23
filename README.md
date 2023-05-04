@@ -29,7 +29,7 @@ The user will be presented with a menu containing options 1-4. This will allow t
 
 Press 1 - Anne, which shows 
 
-Press 2 - Airish, which shows
+Press 2 - Airish, which shows a butterfly that moves with the cursor and a floral background which goes with the music sounds. The colour of the floral background also changes after the first time you press the key to start it.
 
 Press 3 - Mena, which shows a house with street lights that has grass and a pond with rocks around it that will react to the beat of the music that we chooose, with a rocket moving up to the moon
 
@@ -47,7 +47,7 @@ filed called 'Start.java' which has a switch statement
 
 # What I am most proud of in the assignment
 
-Airish - 
+Airish - Despite the difficulties I encountered, what I am most proud of is being persevering. As I attempted other drawings like a recursive factoral tree and node growing tree etc. As well as that, getting most of the floral pattern for the background as it took a lot of trial and error to figure out the co-ordinates that will work. I found that it was also pleasing to see the butterfly and the background go with the music.
 
 Anne - 
 
