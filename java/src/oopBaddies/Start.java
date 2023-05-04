@@ -116,10 +116,7 @@ public class Start extends Visual{
             break;
             
 
-    }
-    }
-
-    public void triangle(int center) {
+        }
     }
 
 

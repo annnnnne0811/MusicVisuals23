@@ -43,7 +43,115 @@ properly. To start this project you will need to press the FN-F5 and then the pr
 or visualisers for you to watch and it will start playing the song
 
 We made a folder called 'oopBaddies' inside the src folder. Inside the folder, we all made java files for each visualiser. After that we made a
-filed called 'Start.java' which has a switch statement 
+filed called 'Start.java' which has a switch statement allowing to access each java file that was needed depending on which key was pressed. Then, we called this file in Main.java to be able to excute the code. We did this by importing the oopBaddies folder.
+
+```Java
+import oopBaddies.*;
+
+```
+Visual.java has a subclass called Start.java. This states that we can use the minim libraries that is called in Visual.java. This allows us to play our song.
+
+```Java
+import ddf.minim.*;
+import ddf.minim.analysis.FFT;
+
+```
+
+We also created instance for each of the visualiser in our package, to be able to call the render methods that exist within.
+
+```Java
+public class Start extends Visual{
+    Anne anne = new Anne(this);
+    Airish airish = new Airish(this);
+    Mena mena = new Mena(this);
+    paris paris = new paris(this);
+}
+```
+
+Below you can see the example of the keyPressed method being used to handle the cases within the switch statement. The integer value stored in key will react to the same corresponding number in the switch statement.
+
+```Java
+public void keyPressed()
+    {
+        if(key == '0')
+        {
+            mode = 0;
+        }
+
+        if(key == '1')
+        {
+            mode = 1;
+        }
+
+        if(key == '2')
+        {
+            mode = 2;
+        }
+
+        if(key == '3')
+        {
+            mode = 3;
+        }
+
+        if(key == '4')
+        {
+            mode = 4;
+        
+        }
+    }
+
+```
+
+Then setup() method will play the song with the visualisers
+
+```Java
+public void setup()
+    {
+        startMinim();
+        loadAudio("fujisong.mp3");
+        getAudioPlayer().play();
+        
+        colorMode(HSB);
+    }
+
+```
+
+Then, in the switch statement  each visualiser render() method is called.
+
+```Java
+//Anne 
+case 1:
+ background(153, 204, 255);
+anne.render();
+break;
+
+
+//Airish
+case 2:
+background(0);
+airish.render();
+break;
+
+//Mena
+case 3:
+background(0);
+mena.render();
+break;
+
+//Paris 
+case 4:
+background(10,20,50);
+paris.render();
+break;
+
+```
+
+
+
+
+
+
+
 
 
 # What I am most proud of in the assignment
@@ -58,70 +166,9 @@ Paris - Although there were some stressful moments during the project, which cau
 
 Working with all the shapes, colors, and different functions was enjoyable and enlightening. I'm especially proud of the effort and dedication put forth by everyone on our team, which helped make our project outstanding and appealing. This assignment has taught me so many valuable lessons, and I feel grateful and proud to have been a part of such a great team. 
 
-# Markdown Tutorial
 
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
 
 This is a youtube video:
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
 
-This is a table:
-
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
