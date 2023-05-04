@@ -31,7 +31,7 @@ Press 1 - Anne, which shows
 
 Press 2 - Airish, which shows
 
-Press 3 - Mena, which shows a house with street lights that has grass and a pond with rocks around it, with a rocket moving up to the moon
+Press 3 - Mena, which shows a house with street lights that has grass and a pond with rocks around it that will react to the beat of the music that we chooose, with a rocket moving up to the moon
 
 Press 4 - Paris, which has a moving blue ocean wave and the moon in the middle that reacts to music, as well as two rainbow shifting color hearts on the side of the screen and a little plane that flies across the screen and loops around. A rainbow pixel-like static appears on the screen at random to reflect a retro aesthetic vibe. 
 
@@ -51,7 +51,7 @@ Airish -
 
 Anne - 
 
-Mena -
+Mena - Even thought there were diffcult moment during this assignment, What i was most proud about doing this assignment was doing the house as it was diffcult at the start because the roof didn't want to go it co oridnates but i wish i couldve something better and add something to the house , but in the end i solved the problem with the help of my team, also making all the ellipse mathing to the beat of the muisc was the most proud part and also making the rocket moving up to the sky. I am very happy with outcome in the end.
 
 Paris - Although there were some stressful moments during the project, which caused me to have many breakdowns due to the code not working correctly and the screen size being off, our team was able to create some fantastic processing sketches that showcased our creativity and teamwork. Despite the challenges, I was eventually able to correct my code, the most challenging part of the code was resizing the blue wave, it was really difficult to modify the size at the begining and while it didn't turn out exactly as I had hoped, the resulting visuals were suprisingly great, and I'm quite satisfied with the outcome.
 
