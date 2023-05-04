@@ -233,6 +233,7 @@ public class Anne extends Visual
         cloud(-100, -544, 10, 30* smoothedavg*200);
         cloud(-300, -600, 10, 30* smoothedavg*200);
         cloud(0, -644, 10, 30* smoothedavg*200);
+        
 
 
     }//End of the void render
