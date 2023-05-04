@@ -131,6 +131,18 @@ background(0);
 airish.render();
 break;
 
+//Mena
+case 3:
+background(0);
+mena.render();
+break;
+
+//Paris 
+case 4:
+background(10,20,50);
+paris.render();
+break;
+
 ```
 
 
