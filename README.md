@@ -26,8 +26,9 @@ To achieve this goal, we made a menu that gives the user 4 options 1. Anne, 2.Ai
 # Instructions
 
 The user will be presented with a menu containing options 1-4. This will allow the user to enter a key from 1-4 to choose which type design that they would like to see.
+press 0 - Display of the menu
 
-Press 1 - Anne, which shows the clouds going along with the music and the flowers that rotate 
+Press 1 - Anne, which shows the clouds going along with the music and the flowers that rotating 
 
 Press 2 - Airish, which shows a butterfly that moves with the cursor and a floral background which goes with the music sounds. The colour of the floral background also changes after the first time you press the key to start it.
 
@@ -49,7 +50,7 @@ filed called 'Start.java' which has a switch statement
 
 Airish - Despite the difficulties I encountered, what I am most proud of is being persevering. As I attempted other drawings like a recursive factoral tree and node growing tree etc. As well as that, getting most of the floral pattern for the background as it took a lot of trial and error to figure out the co-ordinates that will work. I found that it was also pleasing to see the butterfly and the background go with the music.
 
-Anne - 
+Anne - The most thing im proud of in the assignment is the flower rotating even though I hard time really making it work. The framerate just lags the whole screen even though its frameRate is lowered. I found this assignment fun to make it was just very stressfull for me to make everything work without errors. 
 
 Mena - Even thought there were diffcult moment during this assignment, What i was most proud about doing this assignment was doing the house as it was diffcult at the start because the roof didn't want to go it co oridnates but i wish i couldve something better and add something to the house , but in the end i solved the problem with the help of my team, also making all the ellipse mathing to the beat of the muisc was the most proud part and also making the rocket moving up to the sky. I am very happy with outcome in the end.
 

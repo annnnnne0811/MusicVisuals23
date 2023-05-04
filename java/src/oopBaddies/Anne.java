@@ -62,13 +62,6 @@ public class Anne extends Visual
         anne.smooth();
         anne.noSmooth();
 
-
-        
-      //anne.translate(width/2, height/2);
-      //rotates the sun for real this time   PLEASE
-      // float angle = radians(frameCount % 360); 
-      //anne.rotate(angle);
-
         anne.fill(245,187,87);
         anne.ellipse(224, 184, 220, 220);
 
@@ -130,9 +123,6 @@ public class Anne extends Visual
         anne.popMatrix();
 
 
-
-
-
         //end of the pushMatrix
         anne.popMatrix();
 
@@ -177,19 +167,14 @@ public class Anne extends Visual
     
         anne.stroke(41, 63, 22);
         anne.strokeWeight(3);
-        anne.line(0, 15, 0,255);
+        anne.line(0, 15, 0,300);
 
         //end of stem popMatrix()
         anne.popMatrix();
 
     
-
         //end of the pushMatrix
         anne.popMatrix();
-
-
-
-
 
 
     } //End of the funtion to draw the flower 
@@ -242,17 +227,12 @@ public class Anne extends Visual
         anne.translate(anne.width/2, anne.height/2,0);
 
         //renders the clouds 
-        cloud(-600, -544, 10, 20* smoothedavg*200);
-        cloud(-800, -644, 10, 20* smoothedavg*200);
-        cloud(-1000, -644, 10, 20* smoothedavg*200);
-        cloud(-100, -544, 10, 20* smoothedavg*200);
-        cloud(-300, -600, 10, 20* smoothedavg*200);
-        cloud(0, -644, 10, 20* smoothedavg*200);
-
-
-
-
-
+        cloud(-600, -544, 10, 30* smoothedavg*200);
+        cloud(-800, -644, 10, 30* smoothedavg*200);
+        cloud(-1000, -644, 10, 30* smoothedavg*200);
+        cloud(-100, -544, 10, 30* smoothedavg*200);
+        cloud(-300, -600, 10, 30* smoothedavg*200);
+        cloud(0, -644, 10, 30* smoothedavg*200);
 
 
     }//End of the void render
